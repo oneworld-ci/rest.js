@@ -509,9 +509,6 @@
   },
   "apps": {
     "addRepoToInstallation": {
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
       "method": "PUT",
       "params": {
         "installation_id": {
@@ -559,7 +556,7 @@
     },
     "createFromManifest": {
       "headers": {
-        "accept": "application/vnd.github.fury-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.fury-preview+json"
       },
       "method": "POST",
       "params": {
@@ -627,14 +624,14 @@
       "url": "/users/:username/installation"
     },
     "getAuthenticated": {
+      "headers": {
+        "accept": "application/vnd.github.machine-man-preview+json"
+      },
       "method": "GET",
       "params": {},
       "url": "/app"
     },
     "getBySlug": {
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
       "method": "GET",
       "params": {
         "app_slug": {
@@ -656,36 +653,6 @@
         }
       },
       "url": "/app/installations/:installation_id"
-    },
-    "getInstallationRepositories": {
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
-      "method": "GET",
-      "params": {
-        "page": {
-          "type": "integer"
-        },
-        "per_page": {
-          "type": "integer"
-        }
-      },
-      "url": "/installation/repositories"
-    },
-    "getInstallations": {
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
-      "method": "GET",
-      "params": {
-        "page": {
-          "type": "integer"
-        },
-        "per_page": {
-          "type": "integer"
-        }
-      },
-      "url": "/app/installations"
     },
     "listAccountsUserOrOrgOnPlan": {
       "method": "GET",
@@ -763,6 +730,21 @@
       },
       "url": "/user/installations/:installation_id/repositories"
     },
+    "listInstallations": {
+      "headers": {
+        "accept": "application/vnd.github.machine-man-preview+json"
+      },
+      "method": "GET",
+      "params": {
+        "page": {
+          "type": "integer"
+        },
+        "per_page": {
+          "type": "integer"
+        }
+      },
+      "url": "/app/installations"
+    },
     "listInstallationsForAuthenticatedUser": {
       "headers": {
         "accept": "application/vnd.github.machine-man-preview+json"
@@ -826,10 +808,19 @@
       },
       "url": "/marketplace_listing/stubbed/plans"
     },
-    "removeRepoFromInstallation": {
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
+    "listRepos": {
+      "method": "GET",
+      "params": {
+        "page": {
+          "type": "integer"
+        },
+        "per_page": {
+          "type": "integer"
+        }
       },
+      "url": "/installation/repositories"
+    },
+    "removeRepoFromInstallation": {
       "method": "DELETE",
       "params": {
         "installation_id": {
@@ -1075,7 +1066,7 @@
   "checks": {
     "create": {
       "headers": {
-        "accept": "application/vnd.github.antiope-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.antiope-preview+json"
       },
       "method": "POST",
       "params": {
@@ -1239,7 +1230,7 @@
     },
     "get": {
       "headers": {
-        "accept": "application/vnd.github.antiope-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.antiope-preview+json"
       },
       "method": "GET",
       "params": {
@@ -1260,7 +1251,7 @@
     },
     "getSuite": {
       "headers": {
-        "accept": "application/vnd.github.antiope-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.antiope-preview+json"
       },
       "method": "GET",
       "params": {
@@ -1281,7 +1272,7 @@
     },
     "listAnnotations": {
       "headers": {
-        "accept": "application/vnd.github.antiope-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.antiope-preview+json"
       },
       "method": "GET",
       "params": {
@@ -1308,7 +1299,7 @@
     },
     "listForRef": {
       "headers": {
-        "accept": "application/vnd.github.antiope-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.antiope-preview+json"
       },
       "method": "GET",
       "params": {
@@ -1353,7 +1344,7 @@
     },
     "listForSuite": {
       "headers": {
-        "accept": "application/vnd.github.antiope-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.antiope-preview+json"
       },
       "method": "GET",
       "params": {
@@ -1398,7 +1389,7 @@
     },
     "listSuitesForRef": {
       "headers": {
-        "accept": "application/vnd.github.antiope-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.antiope-preview+json"
       },
       "method": "GET",
       "params": {
@@ -1429,27 +1420,6 @@
       },
       "url": "/repos/:owner/:repo/commits/:ref/check-suites"
     },
-    "requestSuites": {
-      "deprecated": "use `rerequestSuite` instead",
-      "headers": {
-        "accept": "application/vnd.github.antiope-preview+json"
-      },
-      "method": "POST",
-      "params": {
-        "head_sha": {
-          "type": "string"
-        },
-        "owner": {
-          "required": true,
-          "type": "string"
-        },
-        "repo": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/repos/:owner/:repo/check-suite-requests"
-    },
     "rerequestSuite": {
       "headers": {
         "accept": "application/vnd.github.antiope-preview+json"
@@ -1473,7 +1443,7 @@
     },
     "setSuitesPreferences": {
       "headers": {
-        "accept": "application/vnd.github.antiope-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.antiope-preview+json"
       },
       "method": "PATCH",
       "params": {
@@ -1501,7 +1471,7 @@
     },
     "update": {
       "headers": {
-        "accept": "application/vnd.github.antiope-preview+json,application/vnd.github.machine-man-preview+json"
+        "accept": "application/vnd.github.antiope-preview+json"
       },
       "method": "PATCH",
       "params": {
@@ -1642,9 +1612,6 @@
   },
   "codesOfConduct": {
     "getConductCode": {
-      "headers": {
-        "accept": "application/vnd.github.scarlet-witch-preview+json"
-      },
       "method": "GET",
       "params": {
         "key": {
@@ -1655,9 +1622,6 @@
       "url": "/codes_of_conduct/:key"
     },
     "getForRepo": {
-      "headers": {
-        "accept": "application/vnd.github.scarlet-witch-preview+json"
-      },
       "method": "GET",
       "params": {
         "owner": {
@@ -1672,262 +1636,9 @@
       "url": "/repos/:owner/:repo/community/code_of_conduct"
     },
     "listConductCodes": {
-      "headers": {
-        "accept": "application/vnd.github.scarlet-witch-preview+json"
-      },
       "method": "GET",
       "params": {},
       "url": "/codes_of_conduct"
-    }
-  },
-  "enterprise": {
-    "createOrg": {
-      "method": "POST",
-      "params": {
-        "admin": {
-          "required": true,
-          "type": "string"
-        },
-        "login": {
-          "required": true,
-          "type": "string"
-        },
-        "profile_name": {
-          "type": "string"
-        }
-      },
-      "url": "/admin/organizations"
-    },
-    "createPreReceiveEnvironment": {
-      "method": "POST",
-      "params": {
-        "image_url": {
-          "required": true,
-          "type": "string"
-        },
-        "name": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/pre-receive-environments"
-    },
-    "createPreReceiveHook": {
-      "method": "POST",
-      "params": {
-        "allow_downstream_configuration": {
-          "type": "boolean"
-        },
-        "enforcement": {
-          "type": "string"
-        },
-        "environment": {
-          "required": true,
-          "type": "object"
-        },
-        "name": {
-          "required": true,
-          "type": "string"
-        },
-        "script": {
-          "required": true,
-          "type": "string"
-        },
-        "script_repository": {
-          "required": true,
-          "type": "object"
-        }
-      },
-      "url": "/admin/pre-receive-hooks"
-    },
-    "deletePreReceiveEnvironment": {
-      "method": "DELETE",
-      "params": {
-        "id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/pre-receive-environments/:id"
-    },
-    "deletePreReceiveHook": {
-      "method": "DELETE",
-      "params": {
-        "id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/pre_receive_hooks/:id"
-    },
-    "editPreReceiveEnvironment": {
-      "method": "PATCH",
-      "params": {
-        "id": {
-          "required": true,
-          "type": "string"
-        },
-        "image_url": {
-          "required": true,
-          "type": "string"
-        },
-        "name": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/pre-receive-environments/:id"
-    },
-    "editPreReceiveHook": {
-      "method": "PATCH",
-      "params": {
-        "hook": {
-          "mapTo": "input",
-          "required": true,
-          "type": "object"
-        },
-        "id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/pre_receive_hooks/:id"
-    },
-    "getLicense": {
-      "method": "GET",
-      "params": {},
-      "url": "/enterprise/settings/license"
-    },
-    "getPreReceiveEnvironment": {
-      "method": "GET",
-      "params": {
-        "id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/pre-receive-environments/:id"
-    },
-    "getPreReceiveEnvironmentDownloadStatus": {
-      "method": "GET",
-      "params": {
-        "id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/pre-receive-environments/:id/downloads/latest"
-    },
-    "getPreReceiveEnvironments": {
-      "method": "GET",
-      "params": {},
-      "url": "/admin/pre-receive-environments"
-    },
-    "getPreReceiveHook": {
-      "method": "GET",
-      "params": {
-        "id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/pre-receive-hooks/:id"
-    },
-    "getPreReceiveHooks": {
-      "method": "GET",
-      "params": {},
-      "url": "/admin/pre-receive-hooks"
-    },
-    "queueIndexingJob": {
-      "method": "POST",
-      "params": {
-        "target": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/staff/indexing_jobs"
-    },
-    "stats": {
-      "method": "GET",
-      "params": {
-        "type": {
-          "enum": [
-            "issues",
-            "hooks",
-            "milestones",
-            "orgs",
-            "comments",
-            "pages",
-            "users",
-            "gists",
-            "pulls",
-            "repos",
-            "all"
-          ],
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/enterprise/stats/:type"
-    },
-    "syncLdapForTeam": {
-      "method": "POST",
-      "params": {
-        "team_id": {
-          "required": true,
-          "type": "integer"
-        }
-      },
-      "url": "/admin/ldap/teams/:team_id/sync"
-    },
-    "syncLdapForUser": {
-      "method": "POST",
-      "params": {
-        "username": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/ldap/users/:username/sync"
-    },
-    "triggerPreReceiveEnvironmentDownload": {
-      "method": "POST",
-      "params": {
-        "id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/pre-receive-environments/:id/downloads"
-    },
-    "updateLdapForTeam": {
-      "method": "PATCH",
-      "params": {
-        "ldap_dn": {
-          "required": true,
-          "type": "string"
-        },
-        "team_id": {
-          "required": true,
-          "type": "integer"
-        }
-      },
-      "url": "/admin/ldap/teams/:team_id/mapping"
-    },
-    "updateLdapForUser": {
-      "method": "PATCH",
-      "params": {
-        "ldap_dn": {
-          "required": true,
-          "type": "string"
-        },
-        "username": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/admin/ldap/users/:username/mapping"
     }
   },
   "gists": {
@@ -2462,26 +2173,6 @@
       },
       "url": "/repos/:owner/:repo/git/refs/:ref"
     },
-    "getReferences": {
-      "method": "GET",
-      "params": {
-        "owner": {
-          "required": true,
-          "type": "string"
-        },
-        "page": {
-          "type": "integer"
-        },
-        "per_page": {
-          "type": "integer"
-        },
-        "repo": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/repos/:owner/:repo/git/refs"
-    },
     "getTag": {
       "method": "GET",
       "params": {
@@ -2499,26 +2190,6 @@
         }
       },
       "url": "/repos/:owner/:repo/git/tags/:tag_sha"
-    },
-    "getTags": {
-      "method": "GET",
-      "params": {
-        "owner": {
-          "required": true,
-          "type": "string"
-        },
-        "page": {
-          "type": "integer"
-        },
-        "per_page": {
-          "type": "integer"
-        },
-        "repo": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/repos/:owner/:repo/git/refs/tags"
     },
     "getTree": {
       "method": "GET",
@@ -2604,83 +2275,6 @@
       "url": "/gitignore/templates"
     }
   },
-  "integrations": {
-    "addRepoToInstallation": {
-      "deprecated": "`integrations` has been renamed to `apps`",
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
-      "method": "PUT",
-      "params": {
-        "installation_id": {
-          "required": true,
-          "type": "string"
-        },
-        "repository_id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/user/installations/:installation_id/repositories/:repository_id"
-    },
-    "createInstallationToken": {
-      "deprecated": "`integrations` has been renamed to `apps`",
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
-      "method": "POST",
-      "params": {
-        "installation_id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/installations/:installation_id/access_tokens"
-    },
-    "getInstallationRepositories": {
-      "deprecated": "`integrations` has been renamed to `apps`",
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
-      "method": "GET",
-      "params": {},
-      "url": "/installation/repositories"
-    },
-    "getInstallations": {
-      "deprecated": "`integrations` has been renamed to `apps`",
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
-      "method": "GET",
-      "params": {
-        "page": {
-          "type": "integer"
-        },
-        "per_page": {
-          "type": "integer"
-        }
-      },
-      "url": "/app/installations"
-    },
-    "removeRepoFromInstallation": {
-      "deprecated": "`integrations` has been renamed to `apps`",
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
-      "method": "DELETE",
-      "params": {
-        "installation_id": {
-          "required": true,
-          "type": "string"
-        },
-        "repository_id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/user/installations/:installation_id/repositories/:repository_id"
-    }
-  },
   "issues": {
     "addAssignees": {
       "method": "POST",
@@ -2745,9 +2339,6 @@
       "url": "/repos/:owner/:repo/assignees/:assignee"
     },
     "create": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "POST",
       "params": {
         "assignee": {
@@ -2781,9 +2372,6 @@
       "url": "/repos/:owner/:repo/issues"
     },
     "createComment": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "POST",
       "params": {
         "body": {
@@ -2862,9 +2450,6 @@
       "url": "/repos/:owner/:repo/milestones"
     },
     "deleteComment": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "DELETE",
       "params": {
         "comment_id": {
@@ -2919,9 +2504,6 @@
       "url": "/repos/:owner/:repo/milestones/:number"
     },
     "get": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "number": {
@@ -2940,9 +2522,6 @@
       "url": "/repos/:owner/:repo/issues/:number"
     },
     "getComment": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "comment_id": {
@@ -3021,9 +2600,6 @@
       "url": "/repos/:owner/:repo/milestones/:number"
     },
     "list": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "direction": {
@@ -3095,9 +2671,6 @@
       "url": "/repos/:owner/:repo/assignees"
     },
     "listComments": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "number": {
@@ -3125,9 +2698,6 @@
       "url": "/repos/:owner/:repo/issues/:number/comments"
     },
     "listCommentsForRepo": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "direction": {
@@ -3204,7 +2774,7 @@
     },
     "listEventsForTimeline": {
       "headers": {
-        "accept": "application/vnd.github.mockingbird-preview"
+        "accept": "application/vnd.github.mockingbird-preview+json"
       },
       "method": "GET",
       "params": {
@@ -3230,9 +2800,6 @@
       "url": "/repos/:owner/:repo/issues/:number/timeline"
     },
     "listForAuthenticatedUser": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "direction": {
@@ -3284,9 +2851,6 @@
       "url": "/user/issues"
     },
     "listForOrg": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "direction": {
@@ -3342,9 +2906,6 @@
       "url": "/orgs/:org/issues"
     },
     "listForRepo": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "assignee": {
@@ -3645,9 +3206,6 @@
       "url": "/repos/:owner/:repo/issues/:number/lock"
     },
     "update": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "PATCH",
       "params": {
         "assignee": {
@@ -3692,9 +3250,6 @@
       "url": "/repos/:owner/:repo/issues/:number"
     },
     "updateComment": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "PATCH",
       "params": {
         "body": {
@@ -3848,7 +3403,7 @@
   "migrations": {
     "cancelImport": {
       "headers": {
-        "accept": "application/vnd.github.barred-rock-preview"
+        "accept": "application/vnd.github.barred-rock-preview+json"
       },
       "method": "DELETE",
       "params": {
@@ -3864,9 +3419,6 @@
       "url": "/repos/:owner/:repo/import"
     },
     "deleteArchiveForAuthenticatedUser": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "DELETE",
       "params": {
         "migration_id": {
@@ -3877,9 +3429,6 @@
       "url": "/user/migrations/:migration_id/archive"
     },
     "deleteArchiveForOrg": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "DELETE",
       "params": {
         "migration_id": {
@@ -3894,9 +3443,6 @@
       "url": "/orgs/:org/migrations/:migration_id/archive"
     },
     "getArchiveForAuthenticatedUser": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "GET",
       "params": {
         "migration_id": {
@@ -3907,9 +3453,6 @@
       "url": "/user/migrations/:migration_id/archive"
     },
     "getArchiveForOrg": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "GET",
       "params": {
         "migration_id": {
@@ -3925,7 +3468,7 @@
     },
     "getCommitAuthors": {
       "headers": {
-        "accept": "application/vnd.github.barred-rock-preview"
+        "accept": "application/vnd.github.barred-rock-preview+json"
       },
       "method": "GET",
       "params": {
@@ -3945,7 +3488,7 @@
     },
     "getImportProgress": {
       "headers": {
-        "accept": "application/vnd.github.barred-rock-preview"
+        "accept": "application/vnd.github.barred-rock-preview+json"
       },
       "method": "GET",
       "params": {
@@ -3962,7 +3505,7 @@
     },
     "getLargeFiles": {
       "headers": {
-        "accept": "application/vnd.github.barred-rock-preview"
+        "accept": "application/vnd.github.barred-rock-preview+json"
       },
       "method": "GET",
       "params": {
@@ -3978,9 +3521,6 @@
       "url": "/repos/:owner/:repo/import/large_files"
     },
     "getStatusForAuthenticatedUser": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "GET",
       "params": {
         "migration_id": {
@@ -3991,9 +3531,6 @@
       "url": "/user/migrations/:migration_id"
     },
     "getStatusForOrg": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "GET",
       "params": {
         "migration_id": {
@@ -4008,9 +3545,6 @@
       "url": "/orgs/:org/migrations/:migration_id"
     },
     "listForAuthenticatedUser": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "GET",
       "params": {
         "page": {
@@ -4023,9 +3557,6 @@
       "url": "/user/migrations"
     },
     "listForOrg": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "GET",
       "params": {
         "org": {
@@ -4043,7 +3574,7 @@
     },
     "mapCommitAuthor": {
       "headers": {
-        "accept": "application/vnd.github.barred-rock-preview"
+        "accept": "application/vnd.github.barred-rock-preview+json"
       },
       "method": "PATCH",
       "params": {
@@ -4070,7 +3601,7 @@
     },
     "setLfsPreference": {
       "headers": {
-        "accept": "application/vnd.github.barred-rock-preview"
+        "accept": "application/vnd.github.barred-rock-preview+json"
       },
       "method": "PATCH",
       "params": {
@@ -4094,9 +3625,6 @@
       "url": "/repos/:owner/:repo/import/lfs"
     },
     "startForAuthenticatedUser": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "POST",
       "params": {
         "exclude_attachments": {
@@ -4113,9 +3641,6 @@
       "url": "/user/migrations"
     },
     "startForOrg": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "POST",
       "params": {
         "exclude_attachments": {
@@ -4137,7 +3662,7 @@
     },
     "startImport": {
       "headers": {
-        "accept": "application/vnd.github.barred-rock-preview"
+        "accept": "application/vnd.github.barred-rock-preview+json"
       },
       "method": "PUT",
       "params": {
@@ -4175,9 +3700,6 @@
       "url": "/repos/:owner/:repo/import"
     },
     "unlockRepoForAuthenticatedUser": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "DELETE",
       "params": {
         "migration_id": {
@@ -4192,9 +3714,6 @@
       "url": "/user/migrations/:migration_id/repos/:repo_name/lock"
     },
     "unlockRepoForOrg": {
-      "headers": {
-        "accept": "application/vnd.github.wyandotte-preview+json"
-      },
       "method": "DELETE",
       "params": {
         "migration_id": {
@@ -4214,7 +3733,7 @@
     },
     "updateImport": {
       "headers": {
-        "accept": "application/vnd.github.barred-rock-preview"
+        "accept": "application/vnd.github.barred-rock-preview+json"
       },
       "method": "PATCH",
       "params": {
@@ -4234,18 +3753,6 @@
         }
       },
       "url": "/repos/:owner/:repo/import"
-    }
-  },
-  "misc": {
-    "getEmojis": {
-      "method": "GET",
-      "params": {},
-      "url": "/emojis"
-    },
-    "getMeta": {
-      "method": "GET",
-      "params": {},
-      "url": "/meta"
     }
   },
   "orgs": {
@@ -4271,9 +3778,6 @@
       "url": "/orgs/:org/memberships/:username"
     },
     "blockUser": {
-      "headers": {
-        "accept": "application/vnd.github.giant-sentry-fist-preview+json"
-      },
       "method": "PUT",
       "params": {
         "org": {
@@ -4288,9 +3792,6 @@
       "url": "/orgs/:org/blocks/:username"
     },
     "checkBlockedUser": {
-      "headers": {
-        "accept": "application/vnd.github.giant-sentry-fist-preview+json"
-      },
       "method": "GET",
       "params": {
         "org": {
@@ -4398,9 +3899,6 @@
       "url": "/orgs/:org/hooks"
     },
     "createInvitation": {
-      "headers": {
-        "accept": "application/vnd.github.dazzler-preview+json"
-      },
       "method": "POST",
       "params": {
         "email": {
@@ -4491,9 +3989,6 @@
       "url": "/organizations"
     },
     "listBlockedUsers": {
-      "headers": {
-        "accept": "application/vnd.github.giant-sentry-fist-preview+json"
-      },
       "method": "GET",
       "params": {
         "org": {
@@ -4731,9 +4226,6 @@
       "url": "/orgs/:org/outside_collaborators/:username"
     },
     "unblockUser": {
-      "headers": {
-        "accept": "application/vnd.github.giant-sentry-fist-preview+json"
-      },
       "method": "DELETE",
       "params": {
         "org": {
@@ -5333,9 +4825,6 @@
   },
   "pullRequests": {
     "checkIfMerged": {
-      "headers": {
-        "accept": "application/vnd.github.polaris-preview"
-      },
       "method": "GET",
       "params": {
         "number": {
@@ -5386,9 +4875,6 @@
       "url": "/repos/:owner/:repo/pulls"
     },
     "createComment": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "POST",
       "params": {
         "body": {
@@ -5422,10 +4908,7 @@
       },
       "url": "/repos/:owner/:repo/pulls/:number/comments"
     },
-    "createCommentReply": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
+    "createCommentAlternative": {
       "method": "POST",
       "params": {
         "body": {
@@ -5451,7 +4934,7 @@
       },
       "url": "/repos/:owner/:repo/pulls/:number/comments"
     },
-    "createFromIssue": {
+    "createFromIssueByPassingIssueNumber": {
       "method": "POST",
       "params": {
         "base": {
@@ -5549,9 +5032,6 @@
       "url": "/repos/:owner/:repo/pulls/:number/requested_reviewers"
     },
     "deleteComment": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "DELETE",
       "params": {
         "comment_id": {
@@ -5659,9 +5139,6 @@
       "url": "/repos/:owner/:repo/pulls/:number"
     },
     "getComment": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "comment_id": {
@@ -5780,9 +5257,6 @@
       "url": "/repos/:owner/:repo/pulls"
     },
     "listComments": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "direction": {
@@ -5824,9 +5298,6 @@
       "url": "/repos/:owner/:repo/pulls/:number/comments"
     },
     "listCommentsForRepo": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "GET",
       "params": {
         "direction": {
@@ -5960,9 +5431,6 @@
       "url": "/repos/:owner/:repo/pulls/:number/reviews"
     },
     "merge": {
-      "headers": {
-        "accept": "application/vnd.github.polaris-preview"
-      },
       "method": "PUT",
       "params": {
         "commit_message": {
@@ -6068,9 +5536,6 @@
       "url": "/repos/:owner/:repo/pulls/:number"
     },
     "updateComment": {
-      "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
-      },
       "method": "PATCH",
       "params": {
         "body": {
@@ -6103,7 +5568,7 @@
   "reactions": {
     "createForCommitComment": {
       "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
+        "accept": "application/vnd.github.squirrel-girl-preview+json"
       },
       "method": "POST",
       "params": {
@@ -6136,7 +5601,7 @@
     },
     "createForIssue": {
       "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
+        "accept": "application/vnd.github.squirrel-girl-preview+json"
       },
       "method": "POST",
       "params": {
@@ -6169,7 +5634,7 @@
     },
     "createForIssueComment": {
       "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
+        "accept": "application/vnd.github.squirrel-girl-preview+json"
       },
       "method": "POST",
       "params": {
@@ -6202,7 +5667,7 @@
     },
     "createForPullRequestReviewComment": {
       "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
+        "accept": "application/vnd.github.squirrel-girl-preview+json"
       },
       "method": "POST",
       "params": {
@@ -6297,7 +5762,7 @@
     },
     "delete": {
       "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
+        "accept": "application/vnd.github.echo-preview+json,application/vnd.github.squirrel-girl-preview+json"
       },
       "method": "DELETE",
       "params": {
@@ -6310,7 +5775,7 @@
     },
     "listForCommitComment": {
       "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
+        "accept": "application/vnd.github.squirrel-girl-preview+json"
       },
       "method": "GET",
       "params": {
@@ -6348,7 +5813,7 @@
     },
     "listForIssue": {
       "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
+        "accept": "application/vnd.github.squirrel-girl-preview+json"
       },
       "method": "GET",
       "params": {
@@ -6386,7 +5851,7 @@
     },
     "listForIssueComment": {
       "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
+        "accept": "application/vnd.github.squirrel-girl-preview+json"
       },
       "method": "GET",
       "params": {
@@ -6424,7 +5889,7 @@
     },
     "listForPullRequestReviewComment": {
       "headers": {
-        "accept": "application/vnd.github.squirrel-girl-preview"
+        "accept": "application/vnd.github.squirrel-girl-preview+json"
       },
       "method": "GET",
       "params": {
@@ -6774,9 +6239,6 @@
       "url": "/repos/:owner/:repo/commits/:sha/comments"
     },
     "createDeployment": {
-      "headers": {
-        "accept": "application/vnd.github.ant-man-preview+json"
-      },
       "method": "POST",
       "params": {
         "auto_merge": {
@@ -6819,9 +6281,6 @@
       "url": "/repos/:owner/:repo/deployments"
     },
     "createDeploymentStatus": {
-      "headers": {
-        "accept": "application/vnd.github.ant-man-preview+json"
-      },
       "method": "POST",
       "params": {
         "auto_inactive": {
@@ -6870,6 +6329,14 @@
       "params": {
         "author": {
           "type": "object"
+        },
+        "author.email": {
+          "required": true,
+          "type": "string"
+        },
+        "author.name": {
+          "required": true,
+          "type": "string"
         },
         "branch": {
           "type": "string"
@@ -7373,16 +6840,6 @@
       },
       "url": "/repos/:owner/:repo/branches/:branch/protection"
     },
-    "getById": {
-      "method": "GET",
-      "params": {
-        "id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/repositories/:id"
-    },
     "getClones": {
       "method": "GET",
       "params": {
@@ -7594,9 +7051,16 @@
       "url": "/repos/:owner/:repo/deployments/:deployment_id"
     },
     "getDeploymentStatus": {
+      "headers": {
+        "accept": "application/vnd.github.ant-man-preview+json"
+      },
       "method": "GET",
       "params": {
         "deployment_id": {
+          "required": true,
+          "type": "integer"
+        },
+        "id": {
           "required": true,
           "type": "integer"
         },
@@ -7652,9 +7116,6 @@
       "url": "/repos/:owner/:repo/hooks/:hook_id"
     },
     "getLatestPagesBuild": {
-      "headers": {
-        "accept": "application/vnd.github.mister-fantastic-preview+json"
-      },
       "method": "GET",
       "params": {
         "owner": {
@@ -7700,9 +7161,6 @@
       "url": "/repos/:owner/:repo/pages"
     },
     "getPagesBuild": {
-      "headers": {
-        "accept": "application/vnd.github.mister-fantastic-preview+json"
-      },
       "method": "GET",
       "params": {
         "build_id": {
@@ -8213,12 +7671,13 @@
       "url": "/repos/:owner/:repo/keys"
     },
     "listDeploymentStatuses": {
-      "headers": {
-        "accept": "application/vnd.github.ant-man-preview+json"
-      },
       "method": "GET",
       "params": {
         "deployment_id": {
+          "required": true,
+          "type": "integer"
+        },
+        "id": {
           "required": true,
           "type": "integer"
         },
@@ -8240,9 +7699,6 @@
       "url": "/repos/:owner/:repo/deployments/:deployment_id/statuses"
     },
     "listDeployments": {
-      "headers": {
-        "accept": "application/vnd.github.ant-man-preview+json"
-      },
       "method": "GET",
       "params": {
         "environment": {
@@ -8456,9 +7912,6 @@
       "url": "/repos/:owner/:repo/languages"
     },
     "listPagesBuilds": {
-      "headers": {
-        "accept": "application/vnd.github.mister-fantastic-preview+json"
-      },
       "method": "GET",
       "params": {
         "owner": {
@@ -8638,9 +8091,6 @@
       "url": "/repos/:owner/:repo/teams"
     },
     "listTopics": {
-      "headers": {
-        "accept": "application/vnd.github.mercy-preview+json"
-      },
       "method": "GET",
       "params": {
         "owner": {
@@ -8983,9 +8433,6 @@
       "url": "/repos/:owner/:repo/branches/:branch/protection/restrictions/users"
     },
     "replaceTopics": {
-      "headers": {
-        "accept": "application/vnd.github.mercy-preview+json"
-      },
       "method": "PUT",
       "params": {
         "names": {
@@ -9021,9 +8468,6 @@
       "url": "/repos/:owner/:repo/pages/builds"
     },
     "retrieveCommunityProfileMetrics": {
-      "headers": {
-        "accept": "application/vnd.github.black-panther-preview+json"
-      },
       "method": "GET",
       "params": {
         "owner": {
@@ -9226,6 +8670,14 @@
       "params": {
         "author": {
           "type": "object"
+        },
+        "author.email": {
+          "required": true,
+          "type": "string"
+        },
+        "author.name": {
+          "required": true,
+          "type": "string"
         },
         "branch": {
           "type": "string"
@@ -9693,9 +9145,6 @@
       "url": "/search/issues"
     },
     "labels": {
-      "headers": {
-        "accept": "application/vnd.github.symmetra-preview+json"
-      },
       "method": "GET",
       "params": {
         "order": {
@@ -9724,9 +9173,6 @@
       "url": "/search/labels"
     },
     "repos": {
-      "headers": {
-        "accept": "application/vnd.github.mercy-preview+json"
-      },
       "method": "GET",
       "params": {
         "order": {
@@ -9758,9 +9204,6 @@
       "url": "/search/repositories"
     },
     "topics": {
-      "headers": {
-        "accept": "application/vnd.github.mercy-preview+json"
-      },
       "method": "GET",
       "params": {
         "q": {
@@ -9818,9 +9261,6 @@
       "url": "/teams/:team_id/members/:username"
     },
     "addOrUpdateMembership": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "PUT",
       "params": {
         "role": {
@@ -9867,9 +9307,6 @@
       "url": "/teams/:team_id/projects/:project_id"
     },
     "addOrUpdateRepo": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "PUT",
       "params": {
         "owner": {
@@ -9896,9 +9333,6 @@
       "url": "/teams/:team_id/repos/:owner/:repo"
     },
     "checkManagesRepo": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "GET",
       "params": {
         "owner": {
@@ -9917,9 +9351,6 @@
       "url": "/teams/:team_id/repos/:owner/:repo"
     },
     "create": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "POST",
       "params": {
         "description": {
@@ -10006,9 +9437,6 @@
       "url": "/teams/:team_id/discussions/:discussion_number/comments"
     },
     "delete": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "DELETE",
       "params": {
         "team_id": {
@@ -10057,9 +9485,6 @@
       "url": "/teams/:team_id/discussions/:discussion_number/comments/:comment_number"
     },
     "get": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "GET",
       "params": {
         "team_id": {
@@ -10122,9 +9547,6 @@
       "url": "/teams/:team_id/members/:username"
     },
     "getMembership": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "GET",
       "params": {
         "team_id": {
@@ -10139,9 +9561,6 @@
       "url": "/teams/:team_id/memberships/:username"
     },
     "list": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "GET",
       "params": {
         "org": {
@@ -10233,9 +9652,6 @@
       "url": "/teams/:team_id/discussions"
     },
     "listForAuthenticatedUser": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "GET",
       "params": {
         "page": {
@@ -10248,9 +9664,6 @@
       "url": "/user/teams"
     },
     "listMembers": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "GET",
       "params": {
         "page": {
@@ -10310,9 +9723,6 @@
       "url": "/teams/:team_id/projects"
     },
     "listRepos": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "GET",
       "params": {
         "page": {
@@ -10343,9 +9753,6 @@
       "url": "/teams/:team_id/members/:username"
     },
     "removeMembership": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "DELETE",
       "params": {
         "team_id": {
@@ -10374,9 +9781,6 @@
       "url": "/teams/:team_id/projects/:project_id"
     },
     "removeRepo": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "DELETE",
       "params": {
         "owner": {
@@ -10412,9 +9816,6 @@
       "url": "/teams/:team_id/projects/:project_id"
     },
     "update": {
-      "headers": {
-        "accept": "application/vnd.github.hellcat-preview+json"
-      },
       "method": "PATCH",
       "params": {
         "description": {
@@ -10505,27 +9906,7 @@
       },
       "url": "/user/emails"
     },
-    "addRepoToInstallation": {
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
-      "method": "PUT",
-      "params": {
-        "installation_id": {
-          "required": true,
-          "type": "integer"
-        },
-        "repository_id": {
-          "required": true,
-          "type": "integer"
-        }
-      },
-      "url": "/user/installations/:installation_id/repositories/:repository_id"
-    },
     "block": {
-      "headers": {
-        "accept": "application/vnd.github.giant-sentry-fist-preview+json"
-      },
       "method": "PUT",
       "params": {
         "username": {
@@ -10536,9 +9917,6 @@
       "url": "/user/blocks/:username"
     },
     "checkBlocked": {
-      "headers": {
-        "accept": "application/vnd.github.giant-sentry-fist-preview+json"
-      },
       "method": "GET",
       "params": {
         "username": {
@@ -10623,16 +10001,6 @@
       },
       "url": "/user/keys/:key_id"
     },
-    "demote": {
-      "method": "DELETE",
-      "params": {
-        "username": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/users/:username/site_admin"
-    },
     "follow": {
       "method": "PUT",
       "params": {
@@ -10647,16 +10015,6 @@
       "method": "GET",
       "params": {},
       "url": "/user"
-    },
-    "getById": {
-      "method": "GET",
-      "params": {
-        "id": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/user/:id"
     },
     "getByUsername": {
       "method": "GET",
@@ -10729,9 +10087,6 @@
       "url": "/users"
     },
     "listBlocked": {
-      "headers": {
-        "accept": "application/vnd.github.giant-sentry-fist-preview+json"
-      },
       "method": "GET",
       "params": {},
       "url": "/user/blocks"
@@ -10872,43 +10227,6 @@
       },
       "url": "/users/:username/keys"
     },
-    "promote": {
-      "method": "PUT",
-      "params": {
-        "username": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/users/:username/site_admin"
-    },
-    "removeRepoFromInstallation": {
-      "headers": {
-        "accept": "application/vnd.github.machine-man-preview+json"
-      },
-      "method": "DELETE",
-      "params": {
-        "installation_id": {
-          "required": true,
-          "type": "integer"
-        },
-        "repository_id": {
-          "required": true,
-          "type": "integer"
-        }
-      },
-      "url": "/user/installations/:installation_id/repositories/:repository_id"
-    },
-    "suspend": {
-      "method": "PUT",
-      "params": {
-        "username": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/users/:username/suspended"
-    },
     "togglePrimaryEmailVisibility": {
       "method": "PATCH",
       "params": {
@@ -10924,9 +10242,6 @@
       "url": "/user/email/visibility"
     },
     "unblock": {
-      "headers": {
-        "accept": "application/vnd.github.giant-sentry-fist-preview+json"
-      },
       "method": "DELETE",
       "params": {
         "username": {
@@ -10945,16 +10260,6 @@
         }
       },
       "url": "/user/following/:username"
-    },
-    "unsuspend": {
-      "method": "DELETE",
-      "params": {
-        "username": {
-          "required": true,
-          "type": "string"
-        }
-      },
-      "url": "/users/:username/suspended"
     },
     "updateAuthenticated": {
       "method": "PATCH",
