@@ -1,9 +1,5 @@
 {
   "activity": {
-    "checkNotificationThreadSubscription": {
-      "alias": "activity.getThreadSubscription",
-      "deprecated": "`activity.checkNotificationThreadSubscription()` is deprecated, use `activity.getThreadSubscription()`"
-    },
     "checkStarringRepo": {
       "method": "GET",
       "params": {
@@ -17,10 +13,6 @@
         }
       },
       "url": "/user/starred/:owner/:repo"
-    },
-    "deleteNotificationThreadSubscription": {
-      "alias": "activity.deleteThreadSubscription",
-      "deprecated": "`activity.deleteNotificationThreadSubscription()` is deprecated, use `activity.deleteThreadSubscription()`"
     },
     "deleteRepoSubscription": {
       "method": "DELETE",
@@ -39,72 +31,12 @@
     "deleteThreadSubscription": {
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "thread_id",
-          "deprecated": true
-        },
         "thread_id": {
           "required": true,
           "type": "integer"
         }
       },
       "url": "/notifications/threads/:thread_id/subscription"
-    },
-    "getEvents": {
-      "alias": "activity.listPublicEvents",
-      "deprecated": "`activity.getEvents()` is deprecated, use `activity.listPublicEvents()`"
-    },
-    "getEventsForOrg": {
-      "alias": "activity.listPublicEventsForOrg",
-      "deprecated": "`activity.getEventsForOrg()` is deprecated, use `activity.listPublicEventsForOrg()`"
-    },
-    "getEventsForRepo": {
-      "alias": "activity.listRepoEvents",
-      "deprecated": "`activity.getEventsForRepo()` is deprecated, use `activity.listRepoEvents()`"
-    },
-    "getEventsForRepoIssues": {
-      "alias": "issues.listEventsForRepo",
-      "deprecated": "`activity.getEventsForRepoIssues()` is deprecated, use `issues.listEventsForRepo()`"
-    },
-    "getEventsForRepoNetwork": {
-      "alias": "activity.listPublicEventsForRepoNetwork",
-      "deprecated": "`activity.getEventsForRepoNetwork()` is deprecated, use `activity.listPublicEventsForRepoNetwork()`"
-    },
-    "getEventsForUser": {
-      "alias": "activity.listEventsForUser",
-      "deprecated": "`activity.getEventsForUser()` is deprecated, use `activity.listEventsForUser()`"
-    },
-    "getEventsForUserOrg": {
-      "alias": "activity.listEventsForOrg",
-      "deprecated": "`activity.getEventsForUserOrg()` is deprecated, use `activity.listEventsForOrg()`"
-    },
-    "getEventsForUserPublic": {
-      "alias": "activity.listPublicEventsForUser",
-      "deprecated": "`activity.getEventsForUserPublic()` is deprecated, use `activity.listPublicEventsForUser()`"
-    },
-    "getEventsReceived": {
-      "alias": "activity.listReceivedEventsForUser",
-      "deprecated": "`activity.getEventsReceived()` is deprecated, use `activity.listReceivedEventsForUser()`"
-    },
-    "getEventsReceivedPublic": {
-      "alias": "activity.listReceivedPublicEventsForUser",
-      "deprecated": "`activity.getEventsReceivedPublic()` is deprecated, use `activity.listReceivedPublicEventsForUser()`"
-    },
-    "getFeeds": {
-      "alias": "activity.listFeeds",
-      "deprecated": "`activity.getFeeds()` is deprecated, use `activity.listFeeds()`"
-    },
-    "getNotificationThread": {
-      "alias": "activity.getThread",
-      "deprecated": "`activity.getNotificationThread()` is deprecated, use `activity.getThread()`"
-    },
-    "getNotifications": {
-      "alias": "activity.listNotifications",
-      "deprecated": "`activity.getNotifications()` is deprecated, use `activity.listNotifications()`"
-    },
-    "getNotificationsForUser": {
-      "alias": "activity.listNotificationsForRepo",
-      "deprecated": "`activity.getNotificationsForUser()` is deprecated, use `activity.listNotificationsForRepo()`"
     },
     "getRepoSubscription": {
       "method": "GET",
@@ -120,25 +52,9 @@
       },
       "url": "/repos/:owner/:repo/subscription"
     },
-    "getStargazersForRepo": {
-      "alias": "activity.listStargazersForRepo",
-      "deprecated": "`activity.getStargazersForRepo()` is deprecated, use `activity.listStargazersForRepo()`"
-    },
-    "getStarredRepos": {
-      "alias": "activity.listReposStarredByAuthenticatedUser",
-      "deprecated": "`activity.getStarredRepos()` is deprecated, use `activity.listReposStarredByAuthenticatedUser()`"
-    },
-    "getStarredReposForUser": {
-      "alias": "activity.listReposStarredByUser",
-      "deprecated": "`activity.getStarredReposForUser()` is deprecated, use `activity.listReposStarredByUser()`"
-    },
     "getThread": {
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "thread_id",
-          "deprecated": true
-        },
         "thread_id": {
           "required": true,
           "type": "integer"
@@ -149,28 +65,12 @@
     "getThreadSubscription": {
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "thread_id",
-          "deprecated": true
-        },
         "thread_id": {
           "required": true,
           "type": "integer"
         }
       },
       "url": "/notifications/threads/:thread_id/subscription"
-    },
-    "getWatchedRepos": {
-      "alias": "activity.listWatchedReposForAuthenticatedUser",
-      "deprecated": "`activity.getWatchedRepos()` is deprecated, use `activity.listWatchedReposForAuthenticatedUser()`"
-    },
-    "getWatchedReposForUser": {
-      "alias": "activity.listReposWatchedByUser",
-      "deprecated": "`activity.getWatchedReposForUser()` is deprecated, use `activity.listReposWatchedByUser()`"
-    },
-    "getWatchersForRepo": {
-      "alias": "activity.listWatchersForRepo",
-      "deprecated": "`activity.getWatchersForRepo()` is deprecated, use `activity.listWatchersForRepo()`"
     },
     "listEventsForOrg": {
       "method": "GET",
@@ -518,14 +418,6 @@
       },
       "url": "/notifications"
     },
-    "markNotificationThreadAsRead": {
-      "alias": "activity.markThreadAsRead",
-      "deprecated": "`activity.markNotificationThreadAsRead()` is deprecated, use `activity.markThreadAsRead()`"
-    },
-    "markNotificationsAsRead": {
-      "alias": "activity.markAsRead",
-      "deprecated": "`activity.markNotificationsAsRead()` is deprecated, use `activity.markAsRead()`"
-    },
     "markNotificationsAsReadForRepo": {
       "method": "PUT",
       "params": {
@@ -546,20 +438,12 @@
     "markThreadAsRead": {
       "method": "PATCH",
       "params": {
-        "id": {
-          "alias": "thread_id",
-          "deprecated": true
-        },
         "thread_id": {
           "required": true,
           "type": "integer"
         }
       },
       "url": "/notifications/threads/:thread_id"
-    },
-    "setNotificationThreadSubscription": {
-      "alias": "activity.setThreadSubscription",
-      "deprecated": "`activity.setNotificationThreadSubscription()` is deprecated, use `activity.setThreadSubscription()`"
     },
     "setRepoSubscription": {
       "method": "PUT",
@@ -584,10 +468,6 @@
     "setThreadSubscription": {
       "method": "PUT",
       "params": {
-        "id": {
-          "alias": "thread_id",
-          "deprecated": true
-        },
         "ignored": {
           "type": "boolean"
         },
@@ -625,10 +505,6 @@
         }
       },
       "url": "/user/starred/:owner/:repo"
-    },
-    "unwatchRepo": {
-      "alias": "activity.deleteRepoSubscription",
-      "deprecated": "`activity.unwatchRepo()` is deprecated, use `activity.deleteRepoSubscription()`"
     }
   },
   "apps": {
@@ -656,10 +532,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "account_id",
-          "deprecated": true
-        },
         "page": {
           "type": "integer"
         },
@@ -676,10 +548,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "account_id",
-          "deprecated": true
-        },
         "page": {
           "type": "integer"
         },
@@ -688,14 +556,6 @@
         }
       },
       "url": "/marketplace_listing/stubbed/accounts/:account_id"
-    },
-    "checkMarketplaceListingAccount": {
-      "alias": "apps.checkAccountIsAssociatedWithAny",
-      "deprecated": "`apps.checkMarketplaceListingAccount()` is deprecated, use `apps.checkAccountIsAssociatedWithAny()`"
-    },
-    "checkMarketplaceListingStubbedAccount": {
-      "alias": "apps.checkAccountIsAssociatedWithAnyStubbed",
-      "deprecated": "`apps.checkMarketplaceListingStubbedAccount()` is deprecated, use `apps.checkAccountIsAssociatedWithAnyStubbed()`"
     },
     "createFromManifest": {
       "headers": {
@@ -766,10 +626,6 @@
       },
       "url": "/users/:username/installation"
     },
-    "get": {
-      "alias": "apps.getAuthenticated",
-      "deprecated": "`apps.get()` is deprecated, use `apps.getAuthenticated()`"
-    },
     "getAuthenticated": {
       "method": "GET",
       "params": {},
@@ -787,10 +643,6 @@
         }
       },
       "url": "/apps/:app_slug"
-    },
-    "getForSlug": {
-      "alias": "apps.getBySlug",
-      "deprecated": "`apps.getForSlug()` is deprecated, use `apps.getBySlug()`"
     },
     "getInstallation": {
       "headers": {
@@ -835,22 +687,6 @@
       },
       "url": "/app/installations"
     },
-    "getMarketplaceListingPlanAccounts": {
-      "alias": "apps.listAccountsUserOrOrgOnPlan",
-      "deprecated": "`apps.getMarketplaceListingPlanAccounts()` is deprecated, use `apps.listAccountsUserOrOrgOnPlan()`"
-    },
-    "getMarketplaceListingPlans": {
-      "alias": "apps.listPlans",
-      "deprecated": "`apps.getMarketplaceListingPlans()` is deprecated, use `apps.listPlans()`"
-    },
-    "getMarketplaceListingStubbedPlanAccounts": {
-      "alias": "apps.listAccountsUserOrOrgOnPlanStubbed",
-      "deprecated": "`apps.getMarketplaceListingStubbedPlanAccounts()` is deprecated, use `apps.listAccountsUserOrOrgOnPlanStubbed()`"
-    },
-    "getMarketplaceListingStubbedPlans": {
-      "alias": "apps.listPlansStubbed",
-      "deprecated": "`apps.getMarketplaceListingStubbedPlans()` is deprecated, use `apps.listPlansStubbed()`"
-    },
     "listAccountsUserOrOrgOnPlan": {
       "method": "GET",
       "params": {
@@ -860,10 +696,6 @@
             "desc"
           ],
           "type": "string"
-        },
-        "id": {
-          "alias": "plan_id",
-          "deprecated": true
         },
         "page": {
           "type": "integer"
@@ -894,10 +726,6 @@
             "desc"
           ],
           "type": "string"
-        },
-        "id": {
-          "alias": "plan_id",
-          "deprecated": true
         },
         "page": {
           "type": "integer"
@@ -1017,10 +845,6 @@
     }
   },
   "authorization": {
-    "check": {
-      "alias": "authorization.checkAuthorization",
-      "deprecated": "`authorization.check()` is deprecated, use `authorization.checkAuthorization()`"
-    },
     "checkAuthorization": {
       "method": "GET",
       "params": {
@@ -1034,10 +858,6 @@
         }
       },
       "url": "/applications/:client_id/tokens/:access_token"
-    },
-    "create": {
-      "alias": "authorization.createAuthorization",
-      "deprecated": "`authorization.create()` is deprecated, use `authorization.createAuthorization()`"
     },
     "createAuthorization": {
       "method": "POST",
@@ -1064,20 +884,12 @@
       },
       "url": "/authorizations"
     },
-    "delete": {
-      "alias": "authorization.deleteAuthorization",
-      "deprecated": "`authorization.delete()` is deprecated, use `authorization.deleteAuthorization()`"
-    },
     "deleteAuthorization": {
       "method": "DELETE",
       "params": {
         "authorization_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "authorization_id",
-          "deprecated": true
         }
       },
       "url": "/authorizations/:authorization_id"
@@ -1088,21 +900,9 @@
         "grant_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "grant_id",
-          "deprecated": true
         }
       },
       "url": "/applications/grants/:grant_id"
-    },
-    "get": {
-      "alias": "authorization.getAuthorization",
-      "deprecated": "`authorization.get()` is deprecated, use `authorization.getAuthorization()`"
-    },
-    "getAll": {
-      "alias": "authorization.listAuthorizations",
-      "deprecated": "`authorization.getAll()` is deprecated, use `authorization.listAuthorizations()`"
     },
     "getAuthorization": {
       "method": "GET",
@@ -1110,10 +910,6 @@
         "authorization_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "authorization_id",
-          "deprecated": true
         }
       },
       "url": "/authorizations/:authorization_id"
@@ -1124,17 +920,9 @@
         "grant_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "grant_id",
-          "deprecated": true
         }
       },
       "url": "/applications/grants/:grant_id"
-    },
-    "getGrants": {
-      "alias": "authorization.listGrants",
-      "deprecated": "`authorization.getGrants()` is deprecated, use `authorization.listGrants()`"
     },
     "getOrCreateAuthorizationForApp": {
       "method": "PUT",
@@ -1161,10 +949,6 @@
         }
       },
       "url": "/authorizations/clients/:client_id"
-    },
-    "getOrCreateAuthorizationForAppAndFingerprint": {
-      "alias": "authorization.getOrCreateAuthorizationForAppFingerprint",
-      "deprecated": "`authorization.getOrCreateAuthorizationForAppAndFingerprint()` is deprecated, use `authorization.getOrCreateAuthorizationForAppFingerprint()`"
     },
     "getOrCreateAuthorizationForAppFingerprint": {
       "method": "PUT",
@@ -1217,10 +1001,6 @@
       },
       "url": "/applications/grants"
     },
-    "reset": {
-      "alias": "authorization.resetAuthorization",
-      "deprecated": "`authorization.reset()` is deprecated, use `authorization.resetAuthorization()`"
-    },
     "resetAuthorization": {
       "method": "POST",
       "params": {
@@ -1234,10 +1014,6 @@
         }
       },
       "url": "/applications/:client_id/tokens/:access_token"
-    },
-    "revoke": {
-      "alias": "authorization.revokeAuthorizationForApplication",
-      "deprecated": "`authorization.revoke()` is deprecated, use `authorization.revokeAuthorizationForApplication()`"
     },
     "revokeAuthorizationForApplication": {
       "method": "DELETE",
@@ -1253,10 +1029,6 @@
       },
       "url": "/applications/:client_id/tokens/:access_token"
     },
-    "revokeGrant": {
-      "alias": "authorization.revokeGrantForApplication",
-      "deprecated": "`authorization.revokeGrant()` is deprecated, use `authorization.revokeGrantForApplication()`"
-    },
     "revokeGrantForApplication": {
       "method": "DELETE",
       "params": {
@@ -1271,10 +1043,6 @@
       },
       "url": "/applications/:client_id/grants/:access_token"
     },
-    "update": {
-      "alias": "authorization.updateAuthorization",
-      "deprecated": "`authorization.update()` is deprecated, use `authorization.updateAuthorization()`"
-    },
     "updateAuthorization": {
       "method": "PATCH",
       "params": {
@@ -1287,10 +1055,6 @@
         },
         "fingerprint": {
           "type": "string"
-        },
-        "id": {
-          "alias": "authorization_id",
-          "deprecated": true
         },
         "note": {
           "type": "string"
@@ -1384,9 +1148,6 @@
           "required": true,
           "type": "integer"
         },
-        "output.annotations[].filename": {
-          "alias": "output.annotations[].path"
-        },
         "output.annotations[].message": {
           "required": true,
           "type": "string"
@@ -1407,9 +1168,6 @@
         },
         "output.annotations[].title": {
           "type": "string"
-        },
-        "output.annotations[].warning_level": {
-          "alias": "annotation_level"
         },
         "output.images": {
           "type": "object[]"
@@ -1613,10 +1371,6 @@
           ],
           "type": "string"
         },
-        "id": {
-          "alias": "check_suite_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -1818,9 +1572,6 @@
           "required": true,
           "type": "integer"
         },
-        "output.annotations[].filename": {
-          "alias": "output.annotations[].path"
-        },
         "output.annotations[].message": {
           "required": true,
           "type": "string"
@@ -1841,9 +1592,6 @@
         },
         "output.annotations[].title": {
           "type": "string"
-        },
-        "output.annotations[].warning_level": {
-          "alias": "annotation_level"
         },
         "output.images": {
           "type": "object[]"
@@ -2189,17 +1937,9 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id/star"
-    },
-    "checkStar": {
-      "alias": "gists.checkIsStarred",
-      "deprecated": "`gists.checkStar()` is deprecated, use `gists.checkIsStarred()`"
     },
     "create": {
       "method": "POST",
@@ -2240,10 +1980,6 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id"
@@ -2258,21 +1994,9 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id/comments/:comment_id"
-    },
-    "edit": {
-      "alias": "gists.update",
-      "deprecated": "`gists.edit()` is deprecated, use `gists.update()`"
-    },
-    "editComment": {
-      "alias": "gists.updateComment",
-      "deprecated": "`gists.editComment()` is deprecated, use `gists.updateComment()`"
     },
     "fork": {
       "method": "POST",
@@ -2280,10 +2004,6 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id/forks"
@@ -2294,17 +2014,9 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id"
-    },
-    "getAll": {
-      "alias": "gists.list",
-      "deprecated": "`gists.getAll()` is deprecated, use `gists.list()`"
     },
     "getComment": {
       "method": "GET",
@@ -2316,33 +2028,9 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id/comments/:comment_id"
-    },
-    "getComments": {
-      "alias": "gists.listComments",
-      "deprecated": "`gists.getComments()` is deprecated, use `gists.listComments()`"
-    },
-    "getCommits": {
-      "alias": "gists.listCommits",
-      "deprecated": "`gists.getCommits()` is deprecated, use `gists.listCommits()`"
-    },
-    "getForUser": {
-      "alias": "gists.listPublicForUser",
-      "deprecated": "`gists.getForUser()` is deprecated, use `gists.listPublicForUser()`"
-    },
-    "getForks": {
-      "alias": "gists.listForks",
-      "deprecated": "`gists.getForks()` is deprecated, use `gists.listForks()`"
-    },
-    "getPublic": {
-      "alias": "gists.listPublic",
-      "deprecated": "`gists.getPublic()` is deprecated, use `gists.listPublic()`"
     },
     "getRevision": {
       "method": "GET",
@@ -2351,20 +2039,12 @@
           "required": true,
           "type": "string"
         },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
-        },
         "sha": {
           "required": true,
           "type": "string"
         }
       },
       "url": "/gists/:gist_id/:sha"
-    },
-    "getStarred": {
-      "alias": "gists.listStarred",
-      "deprecated": "`gists.getStarred()` is deprecated, use `gists.listStarred()`"
     },
     "list": {
       "method": "GET",
@@ -2404,10 +2084,6 @@
           "required": true,
           "type": "string"
         },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
-        },
         "page": {
           "type": "integer"
         },
@@ -2423,10 +2099,6 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
         },
         "page": {
           "type": "integer"
@@ -2492,10 +2164,6 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id/star"
@@ -2506,10 +2174,6 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id/star"
@@ -2532,10 +2196,6 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "gist_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id"
@@ -2554,10 +2214,6 @@
         "gist_id": {
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         }
       },
       "url": "/gists/:gist_id/comments/:comment_id"
@@ -2638,10 +2294,6 @@
         }
       },
       "url": "/repos/:owner/:repo/git/refs"
-    },
-    "createReference": {
-      "alias": "gitdata.createRef",
-      "deprecated": "`gitdata.createReference()` is deprecated, use `gitdata.createRef()`"
     },
     "createTag": {
       "method": "POST",
@@ -2756,10 +2408,6 @@
       },
       "url": "/repos/:owner/:repo/git/refs/:ref"
     },
-    "deleteReference": {
-      "alias": "gitdata.deleteRef",
-      "deprecated": "`gitdata.deleteReference()` is deprecated, use `gitdata.deleteRef()`"
-    },
     "getBlob": {
       "method": "GET",
       "params": {
@@ -2774,10 +2422,6 @@
         "repo": {
           "required": true,
           "type": "string"
-        },
-        "sha": {
-          "alias": "file_sha",
-          "deprecated": true
         }
       },
       "url": "/repos/:owner/:repo/git/blobs/:file_sha"
@@ -2796,17 +2440,9 @@
         "repo": {
           "required": true,
           "type": "string"
-        },
-        "sha": {
-          "alias": "commit_sha",
-          "deprecated": true
         }
       },
       "url": "/repos/:owner/:repo/git/commits/:commit_sha"
-    },
-    "getCommitSignatureVerification": {
-      "alias": "gitdata.getCommit",
-      "deprecated": "`gitdata.getCommitSignatureVerification()` is deprecated, use `gitdata.getCommit()`"
     },
     "getRef": {
       "method": "GET",
@@ -2825,10 +2461,6 @@
         }
       },
       "url": "/repos/:owner/:repo/git/refs/:ref"
-    },
-    "getReference": {
-      "alias": "gitdata.getRef",
-      "deprecated": "`gitdata.getReference()` is deprecated, use `gitdata.getRef()`"
     },
     "getReferences": {
       "method": "GET",
@@ -2861,20 +2493,12 @@
           "required": true,
           "type": "string"
         },
-        "sha": {
-          "alias": "tag_sha",
-          "deprecated": true
-        },
         "tag_sha": {
           "required": true,
           "type": "string"
         }
       },
       "url": "/repos/:owner/:repo/git/tags/:tag_sha"
-    },
-    "getTagSignatureVerification": {
-      "alias": "gitdata.getTag",
-      "deprecated": "`gitdata.getTagSignatureVerification()` is deprecated, use `gitdata.getTag()`"
     },
     "getTags": {
       "method": "GET",
@@ -2912,10 +2536,6 @@
         "repo": {
           "required": true,
           "type": "string"
-        },
-        "sha": {
-          "alias": "tree_sha",
-          "deprecated": true
         },
         "tree_sha": {
           "required": true,
@@ -2965,10 +2585,6 @@
         }
       },
       "url": "/repos/:owner/:repo/git/refs/:ref"
-    },
-    "updateReference": {
-      "alias": "gitdata.updateRef",
-      "deprecated": "`gitdata.updateReference()` is deprecated, use `gitdata.updateRef()`"
     }
   },
   "gitignore": {
@@ -3086,10 +2702,6 @@
         }
       },
       "url": "/repos/:owner/:repo/issues/:number/assignees"
-    },
-    "addAssigneesToIssue": {
-      "alias": "issues.addAssignees",
-      "deprecated": "`issues.addAssigneesToIssue()` is deprecated, use `issues.addAssignees()`"
     },
     "addLabels": {
       "method": "POST",
@@ -3259,10 +2871,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -3310,14 +2918,6 @@
       },
       "url": "/repos/:owner/:repo/milestones/:number"
     },
-    "edit": {
-      "alias": "issues.update",
-      "deprecated": "`issues.edit()` is deprecated, use `issues.update()`"
-    },
-    "editComment": {
-      "alias": "issues.updateComment",
-      "deprecated": "`issues.editComment()` is deprecated, use `issues.updateComment()`"
-    },
     "get": {
       "headers": {
         "accept": "application/vnd.github.squirrel-girl-preview"
@@ -3339,14 +2939,6 @@
       },
       "url": "/repos/:owner/:repo/issues/:number"
     },
-    "getAll": {
-      "alias": "issues.list",
-      "deprecated": "`issues.getAll()` is deprecated, use `issues.list()`"
-    },
-    "getAssignees": {
-      "alias": "issues.listAssignees",
-      "deprecated": "`issues.getAssignees()` is deprecated, use `issues.listAssignees()`"
-    },
     "getComment": {
       "headers": {
         "accept": "application/vnd.github.squirrel-girl-preview"
@@ -3356,10 +2948,6 @@
         "comment_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -3378,24 +2966,12 @@
       },
       "url": "/repos/:owner/:repo/issues/comments/:comment_id"
     },
-    "getComments": {
-      "alias": "issues.listComments",
-      "deprecated": "`issues.getComments()` is deprecated, use `issues.listComments()`"
-    },
-    "getCommentsForRepo": {
-      "alias": "issues.listCommentsForRepo",
-      "deprecated": "`issues.getCommentsForRepo()` is deprecated, use `issues.listCommentsForRepo()`"
-    },
     "getEvent": {
       "method": "GET",
       "params": {
         "event_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "event_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -3407,34 +2983,6 @@
         }
       },
       "url": "/repos/:owner/:repo/issues/events/:event_id"
-    },
-    "getEvents": {
-      "alias": "issues.listEvents",
-      "deprecated": "`issues.getEvents()` is deprecated, use `issues.listEvents()`"
-    },
-    "getEventsForRepo": {
-      "alias": "issues.listEventsForRepo",
-      "deprecated": "`issues.getEventsForRepo()` is deprecated, use `issues.listEventsForRepo()`"
-    },
-    "getEventsTimeline": {
-      "alias": "issues.listEventsForTimeline",
-      "deprecated": "`issues.getEventsTimeline()` is deprecated, use `issues.listEventsForTimeline()`"
-    },
-    "getForOrg": {
-      "alias": "issues.listForOrg",
-      "deprecated": "`issues.getForOrg()` is deprecated, use `issues.listForOrg()`"
-    },
-    "getForRepo": {
-      "alias": "issues.listForRepo",
-      "deprecated": "`issues.getForRepo()` is deprecated, use `issues.listForRepo()`"
-    },
-    "getForUser": {
-      "alias": "issues.listForAuthenticatedUser",
-      "deprecated": "`issues.getForUser()` is deprecated, use `issues.listForAuthenticatedUser()`"
-    },
-    "getIssueLabels": {
-      "alias": "issues.listLabelsOnIssue",
-      "deprecated": "`issues.getIssueLabels()` is deprecated, use `issues.listLabelsOnIssue()`"
     },
     "getLabel": {
       "method": "GET",
@@ -3454,10 +3002,6 @@
       },
       "url": "/repos/:owner/:repo/labels/:name"
     },
-    "getLabels": {
-      "alias": "issues.listLabelsForRepo",
-      "deprecated": "`issues.getLabels()` is deprecated, use `issues.listLabelsForRepo()`"
-    },
     "getMilestone": {
       "method": "GET",
       "params": {
@@ -3475,14 +3019,6 @@
         }
       },
       "url": "/repos/:owner/:repo/milestones/:number"
-    },
-    "getMilestoneLabels": {
-      "alias": "issues.listLabelsForMilestone",
-      "deprecated": "`issues.getMilestoneLabels()` is deprecated, use `issues.listLabelsForMilestone()`"
-    },
-    "getMilestones": {
-      "alias": "issues.listMilestonesForRepo",
-      "deprecated": "`issues.getMilestones()` is deprecated, use `issues.listMilestonesForRepo()`"
     },
     "list": {
       "headers": {
@@ -3625,10 +3161,6 @@
     "listEvents": {
       "method": "GET",
       "params": {
-        "issue_number": {
-          "alias": "number",
-          "deprecated": true
-        },
         "number": {
           "required": true,
           "type": "integer"
@@ -3676,10 +3208,6 @@
       },
       "method": "GET",
       "params": {
-        "issue_number": {
-          "alias": "number",
-          "deprecated": true
-        },
         "number": {
           "required": true,
           "type": "integer"
@@ -4014,10 +3542,6 @@
       },
       "url": "/repos/:owner/:repo/issues/:number/lock"
     },
-    "removeAllLabels": {
-      "alias": "issues.removeLabels",
-      "deprecated": "`issues.removeAllLabels()` is deprecated, use `issues.removeLabels()`"
-    },
     "removeAssignees": {
       "method": "DELETE",
       "params": {
@@ -4038,10 +3562,6 @@
         }
       },
       "url": "/repos/:owner/:repo/issues/:number/assignees"
-    },
-    "removeAssigneesFromIssue": {
-      "alias": "issues.removeAssignees",
-      "deprecated": "`issues.removeAssigneesFromIssue()` is deprecated, use `issues.removeAssignees()`"
     },
     "removeLabel": {
       "method": "DELETE",
@@ -4082,10 +3602,6 @@
         }
       },
       "url": "/repos/:owner/:repo/issues/:number/labels"
-    },
-    "replaceAllLabels": {
-      "alias": "issues.replaceLabels",
-      "deprecated": "`issues.replaceAllLabels()` is deprecated, use `issues.replaceLabels()`"
     },
     "replaceLabels": {
       "method": "PUT",
@@ -4189,10 +3705,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -4219,10 +3731,6 @@
         },
         "name": {
           "type": "string"
-        },
-        "oldname": {
-          "alias": "current_name",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -4374,10 +3882,6 @@
       },
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "migration_id",
-          "deprecated": true
-        },
         "migration_id": {
           "required": true,
           "type": "integer"
@@ -4388,10 +3892,6 @@
         }
       },
       "url": "/orgs/:org/migrations/:migration_id/archive"
-    },
-    "deleteMigrationArchive": {
-      "alias": "migrations.deleteArchiveForOrg",
-      "deprecated": "`migrations.deleteMigrationArchive()` is deprecated, use `migrations.deleteArchiveForOrg()`"
     },
     "getArchiveForAuthenticatedUser": {
       "headers": {
@@ -4412,10 +3912,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "migration_id",
-          "deprecated": true
-        },
         "migration_id": {
           "required": true,
           "type": "integer"
@@ -4447,10 +3943,6 @@
       },
       "url": "/repos/:owner/:repo/import/authors"
     },
-    "getImportCommitAuthors": {
-      "alias": "migrations.getCommitAuthors",
-      "deprecated": "`migrations.getImportCommitAuthors()` is deprecated, use `migrations.getCommitAuthors()`"
-    },
     "getImportProgress": {
       "headers": {
         "accept": "application/vnd.github.barred-rock-preview"
@@ -4474,10 +3966,6 @@
       },
       "method": "GET",
       "params": {
-        "name": {
-          "alias": "repo",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -4488,22 +3976,6 @@
         }
       },
       "url": "/repos/:owner/:repo/import/large_files"
-    },
-    "getLargeImportFiles": {
-      "alias": "migrations.getLargeFiles",
-      "deprecated": "`migrations.getLargeImportFiles()` is deprecated, use `migrations.getLargeFiles()`"
-    },
-    "getMigrationArchiveLink": {
-      "alias": "migrations.getArchiveForOrg",
-      "deprecated": "`migrations.getMigrationArchiveLink()` is deprecated, use `migrations.getArchiveForOrg()`"
-    },
-    "getMigrationStatus": {
-      "alias": "migrations.getStatusForOrg",
-      "deprecated": "`migrations.getMigrationStatus()` is deprecated, use `migrations.getStatusForOrg()`"
-    },
-    "getMigrations": {
-      "alias": "migrations.listForOrg",
-      "deprecated": "`migrations.getMigrations()` is deprecated, use `migrations.listForOrg()`"
     },
     "getStatusForAuthenticatedUser": {
       "headers": {
@@ -4524,10 +3996,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "migration_id",
-          "deprecated": true
-        },
         "migration_id": {
           "required": true,
           "type": "integer"
@@ -4600,24 +4068,12 @@
       },
       "url": "/repos/:owner/:repo/import/authors/:author_id"
     },
-    "mapImportCommitAuthor": {
-      "alias": "migrations.mapCommitAuthor",
-      "deprecated": "`migrations.mapImportCommitAuthor()` is deprecated, use `migrations.mapCommitAuthor()`"
-    },
-    "setImportLfsPreference": {
-      "alias": "migrations.setLfsPreference",
-      "deprecated": "`migrations.setImportLfsPreference()` is deprecated, use `migrations.setLfsPreference()`"
-    },
     "setLfsPreference": {
       "headers": {
         "accept": "application/vnd.github.barred-rock-preview"
       },
       "method": "PATCH",
       "params": {
-        "name": {
-          "alias": "repo",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -4718,10 +4174,6 @@
       },
       "url": "/repos/:owner/:repo/import"
     },
-    "startMigration": {
-      "alias": "migrations.startForOrg",
-      "deprecated": "`migrations.startMigration()` is deprecated, use `migrations.startForOrg()`"
-    },
     "unlockRepoForAuthenticatedUser": {
       "headers": {
         "accept": "application/vnd.github.wyandotte-preview+json"
@@ -4745,10 +4197,6 @@
       },
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "migration_id",
-          "deprecated": true
-        },
         "migration_id": {
           "required": true,
           "type": "integer"
@@ -4763,10 +4211,6 @@
         }
       },
       "url": "/orgs/:org/migrations/:migration_id/repos/:repo_name/lock"
-    },
-    "unlockRepoLockedForMigration": {
-      "alias": "migrations.unlockRepoForOrg",
-      "deprecated": "`migrations.unlockRepoLockedForMigration()` is deprecated, use `migrations.unlockRepoForOrg()`"
     },
     "updateImport": {
       "headers": {
@@ -4793,59 +4237,15 @@
     }
   },
   "misc": {
-    "getCodeOfConduct": {
-      "alias": "codesOfConduct.getConductCode",
-      "deprecated": "`misc.getCodeOfConduct()` is deprecated, use `codesOfConduct.getConductCode()`"
-    },
-    "getCodesOfConduct": {
-      "alias": "codesOfConduct.listConductCodes",
-      "deprecated": "`misc.getCodesOfConduct()` is deprecated, use `codesOfConduct.listConductCodes()`"
-    },
     "getEmojis": {
       "method": "GET",
       "params": {},
       "url": "/emojis"
     },
-    "getGitignoreTemplate": {
-      "alias": "gitignore.getTemplate",
-      "deprecated": "`misc.getGitignoreTemplate()` is deprecated, use `gitignore.getTemplate()`"
-    },
-    "getGitignoreTemplates": {
-      "alias": "gitignore.listTemplates",
-      "deprecated": "`misc.getGitignoreTemplates()` is deprecated, use `gitignore.listTemplates()`"
-    },
-    "getLicense": {
-      "alias": "licenses.get",
-      "deprecated": "`misc.getLicense()` is deprecated, use `licenses.get()`"
-    },
-    "getLicenses": {
-      "alias": "licenses.list",
-      "deprecated": "`misc.getLicenses()` is deprecated, use `licenses.list()`"
-    },
     "getMeta": {
       "method": "GET",
       "params": {},
       "url": "/meta"
-    },
-    "getRateLimit": {
-      "alias": "rateLimit.get",
-      "deprecated": "`misc.getRateLimit()` is deprecated, use `rateLimit.get()`"
-    },
-    "getRepoCodeOfConduct": {
-      "alias": "codesOfConduct.getForRepo",
-      "deprecated": "`misc.getRepoCodeOfConduct()` is deprecated, use `codesOfConduct.getForRepo()`"
-    },
-    "getRepoLicense": {
-      "alias": "licenses.getForRepo",
-      "deprecated": "`misc.getRepoLicense()` is deprecated, use `licenses.getForRepo()`"
-    },
-    "renderMarkdown": {
-      "alias": "markdown.render",
-      "deprecated": "`misc.renderMarkdown()` is deprecated, use `markdown.render()`"
-    },
-    "renderMarkdownRaw": {
-      "alias": "markdown.renderRaw",
-      "deprecated": "`misc.renderMarkdownRaw()` is deprecated, use `markdown.renderRaw()`"
     }
   },
   "orgs": {
@@ -4869,18 +4269,6 @@
         }
       },
       "url": "/orgs/:org/memberships/:username"
-    },
-    "addOrgMembership": {
-      "alias": "orgs.addOrUpdateMembership",
-      "deprecated": "`orgs.addOrgMembership()` is deprecated, use `orgs.addOrUpdateMembership()`"
-    },
-    "addTeamMembership": {
-      "alias": "teams.addOrUpdateMembership",
-      "deprecated": "`orgs.addTeamMembership()` is deprecated, use `teams.addOrUpdateMembership()`"
-    },
-    "addTeamRepo": {
-      "alias": "teams.addOrUpdateRepo",
-      "deprecated": "`orgs.addTeamRepo()` is deprecated, use `teams.addOrUpdateRepo()`"
     },
     "blockUser": {
       "headers": {
@@ -4943,10 +4331,6 @@
         }
       },
       "url": "/orgs/:org/public_members/:username"
-    },
-    "checkTeamRepo": {
-      "alias": "teams.checkManagesRepo",
-      "deprecated": "`orgs.checkTeamRepo()` is deprecated, use `teams.checkManagesRepo()`"
     },
     "concealMembership": {
       "method": "DELETE",
@@ -5043,10 +4427,6 @@
       },
       "url": "/orgs/:org/invitations"
     },
-    "createTeam": {
-      "alias": "teams.create",
-      "deprecated": "`orgs.createTeam()` is deprecated, use `teams.create()`"
-    },
     "deleteHook": {
       "method": "DELETE",
       "params": {
@@ -5054,32 +4434,12 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "hook_id",
-          "deprecated": true
-        },
         "org": {
           "required": true,
           "type": "string"
         }
       },
       "url": "/orgs/:org/hooks/:hook_id"
-    },
-    "deleteTeam": {
-      "alias": "teams.delete",
-      "deprecated": "`orgs.deleteTeam()` is deprecated, use `teams.delete()`"
-    },
-    "deleteTeamRepo": {
-      "alias": "teams.removeRepo",
-      "deprecated": "`orgs.deleteTeamRepo()` is deprecated, use `teams.removeRepo()`"
-    },
-    "editHook": {
-      "alias": "orgs.updateHook",
-      "deprecated": "`orgs.editHook()` is deprecated, use `orgs.updateHook()`"
-    },
-    "editTeam": {
-      "alias": "teams.update",
-      "deprecated": "`orgs.editTeam()` is deprecated, use `teams.update()`"
     },
     "get": {
       "method": "GET",
@@ -5091,22 +4451,6 @@
       },
       "url": "/orgs/:org"
     },
-    "getAll": {
-      "alias": "orgs.list",
-      "deprecated": "`orgs.getAll()` is deprecated, use `orgs.list()`"
-    },
-    "getBlockedUsers": {
-      "alias": "orgs.listBlockedUsers",
-      "deprecated": "`orgs.getBlockedUsers()` is deprecated, use `orgs.listBlockedUsers()`"
-    },
-    "getChildTeams": {
-      "alias": "teams.listChild",
-      "deprecated": "`orgs.getChildTeams()` is deprecated, use `teams.listChild()`"
-    },
-    "getForUser": {
-      "alias": "orgs.listForUser",
-      "deprecated": "`orgs.getForUser()` is deprecated, use `orgs.listForUser()`"
-    },
     "getHook": {
       "method": "GET",
       "params": {
@@ -5114,28 +4458,12 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "hook_id",
-          "deprecated": true
-        },
         "org": {
           "required": true,
           "type": "string"
         }
       },
       "url": "/orgs/:org/hooks/:hook_id"
-    },
-    "getHooks": {
-      "alias": "orgs.listHooks",
-      "deprecated": "`orgs.getHooks()` is deprecated, use `orgs.listHooks()`"
-    },
-    "getInvitationTeams": {
-      "alias": "orgs.listInvitationTeams",
-      "deprecated": "`orgs.getInvitationTeams()` is deprecated, use `orgs.listInvitationTeams()`"
-    },
-    "getMembers": {
-      "alias": "orgs.listMembers",
-      "deprecated": "`orgs.getMembers()` is deprecated, use `orgs.listMembers()`"
     },
     "getMembership": {
       "method": "GET",
@@ -5146,46 +4474,6 @@
         }
       },
       "url": "/user/memberships/orgs/:org"
-    },
-    "getOrgMembership": {
-      "alias": "orgs.getMembership",
-      "deprecated": "`orgs.getOrgMembership()` is deprecated, use `orgs.getMembership()`"
-    },
-    "getOutsideCollaborators": {
-      "alias": "orgs.listOutsideCollaborators",
-      "deprecated": "`orgs.getOutsideCollaborators()` is deprecated, use `orgs.listOutsideCollaborators()`"
-    },
-    "getPendingOrgInvites": {
-      "alias": "orgs.listPendingInvitations",
-      "deprecated": "`orgs.getPendingOrgInvites()` is deprecated, use `orgs.listPendingInvitations()`"
-    },
-    "getPendingTeamInvites": {
-      "alias": "teams.listPendingInvitations",
-      "deprecated": "`orgs.getPendingTeamInvites()` is deprecated, use `teams.listPendingInvitations()`"
-    },
-    "getPublicMembers": {
-      "alias": "orgs.listPublicMembers",
-      "deprecated": "`orgs.getPublicMembers()` is deprecated, use `orgs.listPublicMembers()`"
-    },
-    "getTeam": {
-      "alias": "teams.get",
-      "deprecated": "`orgs.getTeam()` is deprecated, use `teams.get()`"
-    },
-    "getTeamMembers": {
-      "alias": "teams.listMembers",
-      "deprecated": "`orgs.getTeamMembers()` is deprecated, use `teams.listMembers()`"
-    },
-    "getTeamMembership": {
-      "alias": "teams.getMembership",
-      "deprecated": "`orgs.getTeamMembership()` is deprecated, use `teams.getMembership()`"
-    },
-    "getTeamRepos": {
-      "alias": "teams.listRepos",
-      "deprecated": "`orgs.getTeamRepos()` is deprecated, use `teams.listRepos()`"
-    },
-    "getTeams": {
-      "alias": "teams.list",
-      "deprecated": "`orgs.getTeams()` is deprecated, use `teams.list()`"
     },
     "list": {
       "method": "GET",
@@ -5379,10 +4667,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "hook_id",
-          "deprecated": true
-        },
         "org": {
           "required": true,
           "type": "string"
@@ -5432,10 +4716,6 @@
       },
       "url": "/orgs/:org/memberships/:username"
     },
-    "removeOrgMembership": {
-      "alias": "orgs.removeMembership",
-      "deprecated": "`orgs.removeOrgMembership()` is deprecated, use `orgs.removeMembership()`"
-    },
     "removeOutsideCollaborator": {
       "method": "DELETE",
       "params": {
@@ -5449,10 +4729,6 @@
         }
       },
       "url": "/orgs/:org/outside_collaborators/:username"
-    },
-    "removeTeamMembership": {
-      "alias": "teams.removeMembership",
-      "deprecated": "`orgs.removeTeamMembership()` is deprecated, use `teams.removeMembership()`"
     },
     "unblockUser": {
       "headers": {
@@ -5546,10 +4822,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "hook_id",
-          "deprecated": true
-        },
         "org": {
           "required": true,
           "type": "string"
@@ -5582,10 +4854,6 @@
       },
       "method": "PUT",
       "params": {
-        "id": {
-          "alias": "project_id",
-          "deprecated": true
-        },
         "permission": {
           "enum": [
             "read",
@@ -5633,9 +4901,6 @@
       },
       "method": "POST",
       "params": {
-        "id": {
-          "alias": "project_id"
-        },
         "name": {
           "required": true,
           "type": "string"
@@ -5703,31 +4968,12 @@
       },
       "url": "/repos/:owner/:repo/projects"
     },
-    "createOrgProject": {
-      "alias": "projects.createForOrg",
-      "deprecated": "`projects.createOrgProject()` is deprecated, use `projects.createForOrg()`"
-    },
-    "createProjectCard": {
-      "alias": "projects.createCard",
-      "deprecated": "`projects.createProjectCard()` is deprecated, use `projects.createCard()`"
-    },
-    "createProjectColumn": {
-      "alias": "projects.createColumn",
-      "deprecated": "`projects.createProjectColumn()` is deprecated, use `projects.createColumn()`"
-    },
-    "createRepoProject": {
-      "alias": "projects.createForRepo",
-      "deprecated": "`projects.createRepoProject()` is deprecated, use `projects.createForRepo()`"
-    },
     "delete": {
       "headers": {
         "accept": "application/vnd.github.inertia-preview+json"
       },
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "project_id"
-        },
         "project_id": {
           "required": true,
           "type": "integer"
@@ -5744,9 +4990,6 @@
         "card_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "card_id"
         }
       },
       "url": "/projects/columns/cards/:card_id"
@@ -5760,24 +5003,9 @@
         "column_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "column_id"
         }
       },
       "url": "/projects/columns/:column_id"
-    },
-    "deleteProject": {
-      "alias": "projects.delete",
-      "deprecated": "`projects.deleteProject()` is deprecated, use `projects.delete()`"
-    },
-    "deleteProjectCard": {
-      "alias": "projects.deleteCard",
-      "deprecated": "`projects.deleteProjectCard()` is deprecated, use `projects.deleteCard()`"
-    },
-    "deleteProjectColumn": {
-      "alias": "projects.deleteColumn",
-      "deprecated": "`projects.deleteProjectColumn()` is deprecated, use `projects.deleteColumn()`"
     },
     "get": {
       "headers": {
@@ -5785,9 +5013,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "project_id"
-        },
         "page": {
           "type": "integer"
         },
@@ -5810,16 +5035,9 @@
         "card_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "card_id"
         }
       },
       "url": "/projects/columns/cards/:card_id"
-    },
-    "getCollaborators": {
-      "alias": "projects.listCollaborators",
-      "deprecated": "`projects.getCollaborators()` is deprecated, use `projects.listCollaborators()`"
     },
     "getColumn": {
       "headers": {
@@ -5830,44 +5048,9 @@
         "column_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "column_id"
         }
       },
       "url": "/projects/columns/:column_id"
-    },
-    "getOrgProjects": {
-      "alias": "projects.listForOrg",
-      "deprecated": "`projects.getOrgProjects()` is deprecated, use `projects.listForOrg()`"
-    },
-    "getProject": {
-      "alias": "projects.get",
-      "deprecated": "`projects.getProject()` is deprecated, use `projects.get()`"
-    },
-    "getProjectCard": {
-      "alias": "projects.getCard",
-      "deprecated": "`projects.getProjectCard()` is deprecated, use `projects.getCard()`"
-    },
-    "getProjectCards": {
-      "alias": "projects.listCards",
-      "deprecated": "`projects.getProjectCards()` is deprecated, use `projects.listCards()`"
-    },
-    "getProjectColumn": {
-      "alias": "projects.getColumn",
-      "deprecated": "`projects.getProjectColumn()` is deprecated, use `projects.getColumn()`"
-    },
-    "getProjectColumns": {
-      "alias": "projects.listColumns",
-      "deprecated": "`projects.getProjectColumns()` is deprecated, use `projects.listColumns()`"
-    },
-    "getRepoProjects": {
-      "alias": "projects.listForRepo",
-      "deprecated": "`projects.getRepoProjects()` is deprecated, use `projects.listForRepo()`"
-    },
-    "getUserPermissionLevel": {
-      "alias": "projects.reviewUserPermissionLevel",
-      "deprecated": "`projects.getUserPermissionLevel()` is deprecated, use `projects.reviewUserPermissionLevel()`"
     },
     "listCards": {
       "headers": {
@@ -5910,10 +5093,6 @@
           ],
           "type": "string"
         },
-        "id": {
-          "alias": "project_id",
-          "deprecated": true
-        },
         "page": {
           "type": "integer"
         },
@@ -5933,9 +5112,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "project_id"
-        },
         "page": {
           "type": "integer"
         },
@@ -6020,9 +5196,6 @@
         "column_id": {
           "type": "integer"
         },
-        "id": {
-          "alias": "card_id"
-        },
         "position": {
           "required": true,
           "type": "string",
@@ -6041,9 +5214,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "column_id"
-        },
         "position": {
           "required": true,
           "type": "string",
@@ -6052,24 +5222,12 @@
       },
       "url": "/projects/columns/:column_id/moves"
     },
-    "moveProjectCard": {
-      "alias": "projects.moveCard",
-      "deprecated": "`projects.moveProjectCard()` is deprecated, use `projects.moveCard()`"
-    },
-    "moveProjectColumn": {
-      "alias": "projects.moveColumn",
-      "deprecated": "`projects.moveProjectColumn()` is deprecated, use `projects.moveColumn()`"
-    },
     "removeCollaborator": {
       "headers": {
         "accept": "application/vnd.github.inertia-preview+json"
       },
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "project_id",
-          "deprecated": true
-        },
         "project_id": {
           "required": true,
           "type": "integer"
@@ -6087,10 +5245,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "project_id",
-          "deprecated": true
-        },
         "project_id": {
           "required": true,
           "type": "integer"
@@ -6110,9 +5264,6 @@
       "params": {
         "body": {
           "type": "string"
-        },
-        "id": {
-          "alias": "project_id"
         },
         "name": {
           "type": "string"
@@ -6156,9 +5307,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "card_id"
-        },
         "note": {
           "type": "string"
         }
@@ -6175,27 +5323,12 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "column_id"
-        },
         "name": {
           "required": true,
           "type": "string"
         }
       },
       "url": "/projects/columns/:column_id"
-    },
-    "updateProject": {
-      "alias": "projects.update",
-      "deprecated": "`projects.updateProject()` is deprecated, use `projects.update()`"
-    },
-    "updateProjectCard": {
-      "alias": "projects.updateCard",
-      "deprecated": "`projects.updateProjectCard()` is deprecated, use `projects.updateCard()`"
-    },
-    "updateProjectColumn": {
-      "alias": "projects.updateColumn",
-      "deprecated": "`projects.updateProjectColumn()` is deprecated, use `projects.updateColumn()`"
     }
   },
   "pullRequests": {
@@ -6219,10 +5352,6 @@
         }
       },
       "url": "/repos/:owner/:repo/pulls/:number/merge"
-    },
-    "checkMerged": {
-      "alias": "pullRequests.checkIfMerged",
-      "deprecated": "`pullRequests.checkMerged()` is deprecated, use `pullRequests.checkIfMerged()`"
     },
     "create": {
       "method": "POST",
@@ -6429,10 +5558,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -6447,10 +5572,6 @@
     "deletePendingReview": {
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "review_id",
-          "deprecated": true
-        },
         "number": {
           "required": true,
           "type": "integer"
@@ -6497,10 +5618,6 @@
     "dismissReview": {
       "method": "PUT",
       "params": {
-        "id": {
-          "alias": "review_id",
-          "deprecated": true
-        },
         "message": {
           "type": "string"
         },
@@ -6523,10 +5640,6 @@
       },
       "url": "/repos/:owner/:repo/pulls/:number/reviews/:review_id/dismissals"
     },
-    "editComment": {
-      "alias": "pullRequests.updateComment",
-      "deprecated": "`pullRequests.editComment()` is deprecated, use `pullRequests.updateComment()`"
-    },
     "get": {
       "method": "GET",
       "params": {
@@ -6545,10 +5658,6 @@
       },
       "url": "/repos/:owner/:repo/pulls/:number"
     },
-    "getAll": {
-      "alias": "pullRequests.list",
-      "deprecated": "`pullRequests.getAll()` is deprecated, use `pullRequests.list()`"
-    },
     "getComment": {
       "headers": {
         "accept": "application/vnd.github.squirrel-girl-preview"
@@ -6558,10 +5667,6 @@
         "comment_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -6574,21 +5679,9 @@
       },
       "url": "/repos/:owner/:repo/pulls/comments/:comment_id"
     },
-    "getComments": {
-      "alias": "pullRequests.listComments",
-      "deprecated": "`pullRequests.getComments()` is deprecated, use `pullRequests.listComments()`"
-    },
-    "getCommentsForRepo": {
-      "alias": "pullRequests.listCommentsForRepo",
-      "deprecated": "`pullRequests.getCommentsForRepo()` is deprecated, use `pullRequests.listCommentsForRepo()`"
-    },
     "getCommentsForReview": {
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "review_id",
-          "deprecated": true
-        },
         "number": {
           "required": true,
           "type": "integer"
@@ -6614,21 +5707,9 @@
       },
       "url": "/repos/:owner/:repo/pulls/:number/reviews/:review_id/comments"
     },
-    "getCommits": {
-      "alias": "pullRequests.listCommits",
-      "deprecated": "`pullRequests.getCommits()` is deprecated, use `pullRequests.listCommits()`"
-    },
-    "getFiles": {
-      "alias": "pullRequests.listFiles",
-      "deprecated": "`pullRequests.getFiles()` is deprecated, use `pullRequests.listFiles()`"
-    },
     "getReview": {
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "review_id",
-          "deprecated": true
-        },
         "number": {
           "required": true,
           "type": "integer"
@@ -6647,18 +5728,6 @@
         }
       },
       "url": "/repos/:owner/:repo/pulls/:number/reviews/:review_id"
-    },
-    "getReviewComments": {
-      "alias": "pullRequests.getCommentsForReview",
-      "deprecated": "`pullRequests.getReviewComments()` is deprecated, use `pullRequests.getCommentsForReview()`"
-    },
-    "getReviewRequests": {
-      "alias": "pullRequests.listReviewRequests",
-      "deprecated": "`pullRequests.getReviewRequests()` is deprecated, use `pullRequests.listReviewRequests()`"
-    },
-    "getReviews": {
-      "alias": "pullRequests.listReviews",
-      "deprecated": "`pullRequests.getReviews()` is deprecated, use `pullRequests.listReviews()`"
     },
     "list": {
       "method": "GET",
@@ -6942,10 +6011,6 @@
           ],
           "type": "string"
         },
-        "id": {
-          "alias": "review_id",
-          "deprecated": true
-        },
         "number": {
           "required": true,
           "type": "integer"
@@ -7016,10 +6081,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -7061,10 +6122,6 @@
           ],
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -7132,10 +6189,6 @@
           "required": true,
           "type": "string"
         },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -7168,10 +6221,6 @@
           ],
           "required": true,
           "type": "string"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -7252,40 +6301,12 @@
       },
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "reaction_id",
-          "deprecated": true
-        },
         "reaction_id": {
           "required": true,
           "type": "integer"
         }
       },
       "url": "/reactions/:reaction_id"
-    },
-    "getForCommitComment": {
-      "alias": "reactions.listForCommitComment",
-      "deprecated": "`reactions.getForCommitComment()` is deprecated, use `reactions.listForCommitComment()`"
-    },
-    "getForIssue": {
-      "alias": "reactions.listForIssue",
-      "deprecated": "`reactions.getForIssue()` is deprecated, use `reactions.listForIssue()`"
-    },
-    "getForIssueComment": {
-      "alias": "reactions.listForIssueComment",
-      "deprecated": "`reactions.getForIssueComment()` is deprecated, use `reactions.listForIssueComment()`"
-    },
-    "getForPullRequestReviewComment": {
-      "alias": "reactions.listForPullRequestReviewComment",
-      "deprecated": "`reactions.getForPullRequestReviewComment()` is deprecated, use `reactions.listForPullRequestReviewComment()`"
-    },
-    "getForTeamDiscussion": {
-      "alias": "reactions.listForTeamDiscussion",
-      "deprecated": "`reactions.getForTeamDiscussion()` is deprecated, use `reactions.listForTeamDiscussion()`"
-    },
-    "getForTeamDiscussionComment": {
-      "alias": "reactions.listForTeamDiscussionComment",
-      "deprecated": "`reactions.getForTeamDiscussionComment()` is deprecated, use `reactions.listForTeamDiscussionComment()`"
     },
     "listForCommitComment": {
       "headers": {
@@ -7307,10 +6328,6 @@
             "hooray"
           ],
           "type": "string"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -7388,10 +6405,6 @@
           ],
           "type": "string"
         },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -7429,10 +6442,6 @@
             "hooray"
           ],
           "type": "string"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -7733,10 +6742,6 @@
       },
       "url": "/repos/:owner/:repo/compare/:base...:head"
     },
-    "create": {
-      "alias": "repos.createForAuthenticatedUser",
-      "deprecated": "`repos.create()` is deprecated, use `repos.createForAuthenticatedUser()`"
-    },
     "createCommitComment": {
       "method": "POST",
       "params": {
@@ -7831,10 +6836,6 @@
         },
         "environment_url": {
           "type": "string"
-        },
-        "id": {
-          "alias": "deployment_id",
-          "deprecated": true
         },
         "log_url": {
           "type": "string"
@@ -7947,10 +6948,6 @@
         }
       },
       "url": "/user/repos"
-    },
-    "createForOrg": {
-      "alias": "repos.createInOrg",
-      "deprecated": "`repos.createForOrg()` is deprecated, use `repos.createInOrg()`"
     },
     "createFork": {
       "method": "POST",
@@ -8157,20 +7154,12 @@
       },
       "url": "/repos/:owner/:repo"
     },
-    "deleteAsset": {
-      "alias": "repos.deleteReleaseAsset",
-      "deprecated": "`repos.deleteAsset()` is deprecated, use `repos.deleteReleaseAsset()`"
-    },
     "deleteCommitComment": {
       "method": "DELETE",
       "params": {
         "comment_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -8183,20 +7172,12 @@
       },
       "url": "/repos/:owner/:repo/comments/:comment_id"
     },
-    "deleteDeployKey": {
-      "alias": "repos.removeDeployKey",
-      "deprecated": "`repos.deleteDeployKey()` is deprecated, use `repos.removeDeployKey()`"
-    },
     "deleteDownload": {
       "method": "DELETE",
       "params": {
         "download_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "download_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -8251,10 +7232,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "hook_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -8284,17 +7261,9 @@
       },
       "url": "/repos/:owner/:repo/invitations/:invitation_id"
     },
-    "deleteInvite": {
-      "alias": "repos.deleteInvitation",
-      "deprecated": "`repos.deleteInvite()` is deprecated, use `repos.deleteInvitation()`"
-    },
     "deleteRelease": {
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "release_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -8317,10 +7286,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "asset_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -8331,26 +7296,6 @@
         }
       },
       "url": "/repos/:owner/:repo/releases/assets/:asset_id"
-    },
-    "edit": {
-      "alias": "repos.update",
-      "deprecated": "`repos.edit()` is deprecated, use `repos.update()`"
-    },
-    "editAsset": {
-      "alias": "repos.updateReleaseAsset",
-      "deprecated": "`repos.editAsset()` is deprecated, use `repos.updateReleaseAsset()`"
-    },
-    "editHook": {
-      "alias": "repos.updateHook",
-      "deprecated": "`repos.editHook()` is deprecated, use `repos.updateHook()`"
-    },
-    "editRelease": {
-      "alias": "repos.updateRelease",
-      "deprecated": "`repos.editRelease()` is deprecated, use `repos.updateRelease()`"
-    },
-    "fork": {
-      "alias": "repos.createFork",
-      "deprecated": "`repos.fork()` is deprecated, use `repos.createFork()`"
     },
     "get": {
       "method": "GET",
@@ -8365,14 +7310,6 @@
         }
       },
       "url": "/repos/:owner/:repo"
-    },
-    "getAll": {
-      "alias": "repos.list",
-      "deprecated": "`repos.getAll()` is deprecated, use `repos.list()`"
-    },
-    "getAllCommitComments": {
-      "alias": "repos.listCommitComments",
-      "deprecated": "`repos.getAllCommitComments()` is deprecated, use `repos.listCommitComments()`"
     },
     "getArchiveLink": {
       "method": "GET",
@@ -8399,14 +7336,6 @@
         }
       },
       "url": "/repos/:owner/:repo/:archive_format/:ref"
-    },
-    "getAsset": {
-      "alias": "repos.getReleaseAsset",
-      "deprecated": "`repos.getAsset()` is deprecated, use `repos.getReleaseAsset()`"
-    },
-    "getAssets": {
-      "alias": "repos.listAssetsForRelease",
-      "deprecated": "`repos.getAssets()` is deprecated, use `repos.listAssetsForRelease()`"
     },
     "getBranch": {
       "method": "GET",
@@ -8443,10 +7372,6 @@
         }
       },
       "url": "/repos/:owner/:repo/branches/:branch/protection"
-    },
-    "getBranches": {
-      "alias": "repos.listBranches",
-      "deprecated": "`repos.getBranches()` is deprecated, use `repos.listBranches()`"
     },
     "getById": {
       "method": "GET",
@@ -8511,10 +7436,6 @@
       },
       "url": "/repos/:owner/:repo/collaborators/:username/permission"
     },
-    "getCollaborators": {
-      "alias": "repos.listCollaborators",
-      "deprecated": "`repos.getCollaborators()` is deprecated, use `repos.listCollaborators()`"
-    },
     "getCombinedStatusForRef": {
       "method": "GET",
       "params": {
@@ -8572,10 +7493,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -8586,10 +7503,6 @@
         }
       },
       "url": "/repos/:owner/:repo/comments/:comment_id"
-    },
-    "getCommitComments": {
-      "alias": "repos.listCommentsForCommit",
-      "deprecated": "`repos.getCommitComments()` is deprecated, use `repos.listCommentsForCommit()`"
     },
     "getCommitRefSha": {
       "method": "GET",
@@ -8608,18 +7521,6 @@
         }
       },
       "url": "/repos/:owner/:repo/commits/:ref"
-    },
-    "getCommits": {
-      "alias": "repos.listCommits",
-      "deprecated": "`repos.getCommits()` is deprecated, use `repos.listCommits()`"
-    },
-    "getCommunityProfileMetrics": {
-      "alias": "repos.retrieveCommunityProfileMetrics",
-      "deprecated": "`repos.getCommunityProfileMetrics()` is deprecated, use `repos.retrieveCommunityProfileMetrics()`"
-    },
-    "getContent": {
-      "alias": "repos.getContents",
-      "deprecated": "`repos.getContent()` is deprecated, use `repos.getContents()`"
     },
     "getContents": {
       "method": "GET",
@@ -8642,10 +7543,6 @@
       },
       "url": "/repos/:owner/:repo/contents/:path"
     },
-    "getContributors": {
-      "alias": "repos.listContributors",
-      "deprecated": "`repos.getContributors()` is deprecated, use `repos.listContributors()`"
-    },
     "getContributorsStats": {
       "method": "GET",
       "params": {
@@ -8663,10 +7560,6 @@
     "getDeployKey": {
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "key_id",
-          "deprecated": true
-        },
         "key_id": {
           "required": true,
           "type": "integer"
@@ -8682,20 +7575,12 @@
       },
       "url": "/repos/:owner/:repo/keys/:key_id"
     },
-    "getDeployKeys": {
-      "alias": "repos.listDeployKeys",
-      "deprecated": "`repos.getDeployKeys()` is deprecated, use `repos.listDeployKeys()`"
-    },
     "getDeployment": {
       "method": "GET",
       "params": {
         "deployment_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "deployment_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -8715,10 +7600,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "deployment_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -8734,24 +7615,12 @@
       },
       "url": "/repos/:owner/:repo/deployments/:deployment_id/statuses/:status_id"
     },
-    "getDeploymentStatuses": {
-      "alias": "repos.listDeploymentStatuses",
-      "deprecated": "`repos.getDeploymentStatuses()` is deprecated, use `repos.listDeploymentStatuses()`"
-    },
-    "getDeployments": {
-      "alias": "repos.listDeployments",
-      "deprecated": "`repos.getDeployments()` is deprecated, use `repos.listDeployments()`"
-    },
     "getDownload": {
       "method": "GET",
       "params": {
         "download_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "download_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -8764,32 +7633,12 @@
       },
       "url": "/repos/:owner/:repo/downloads/:download_id"
     },
-    "getDownloads": {
-      "alias": "repos.listDownloads",
-      "deprecated": "`repos.getDownloads()` is deprecated, use `repos.listDownloads()`"
-    },
-    "getForOrg": {
-      "alias": "repos.listForOrg",
-      "deprecated": "`repos.getForOrg()` is deprecated, use `repos.listForOrg()`"
-    },
-    "getForUser": {
-      "alias": "repos.listForUser",
-      "deprecated": "`repos.getForUser()` is deprecated, use `repos.listForUser()`"
-    },
-    "getForks": {
-      "alias": "repos.listForks",
-      "deprecated": "`repos.getForks()` is deprecated, use `repos.listForks()`"
-    },
     "getHook": {
       "method": "GET",
       "params": {
         "hook_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "hook_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -8801,18 +7650,6 @@
         }
       },
       "url": "/repos/:owner/:repo/hooks/:hook_id"
-    },
-    "getHooks": {
-      "alias": "repos.listHooks",
-      "deprecated": "`repos.getHooks()` is deprecated, use `repos.listHooks()`"
-    },
-    "getInvites": {
-      "alias": "repos.listInvitations",
-      "deprecated": "`repos.getInvites()` is deprecated, use `repos.listInvitations()`"
-    },
-    "getLanguages": {
-      "alias": "repos.listLanguages",
-      "deprecated": "`repos.getLanguages()` is deprecated, use `repos.listLanguages()`"
     },
     "getLatestPagesBuild": {
       "headers": {
@@ -8872,10 +7709,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "build_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -8886,10 +7719,6 @@
         }
       },
       "url": "/repos/:owner/:repo/pages/builds/:build_id"
-    },
-    "getPagesBuilds": {
-      "alias": "repos.listPagesBuilds",
-      "deprecated": "`repos.getPagesBuilds()` is deprecated, use `repos.listPagesBuilds()`"
     },
     "getParticipationStats": {
       "method": "GET",
@@ -8904,10 +7733,6 @@
         }
       },
       "url": "/repos/:owner/:repo/stats/participation"
-    },
-    "getPaths": {
-      "alias": "repos.getTopPaths",
-      "deprecated": "`repos.getPaths()` is deprecated, use `repos.getTopPaths()`"
     },
     "getProtectedBranchAdminEnforcement": {
       "method": "GET",
@@ -8984,10 +7809,6 @@
       },
       "url": "/repos/:owner/:repo/branches/:branch/protection/required_status_checks"
     },
-    "getProtectedBranchRequiredStatusChecksContexts": {
-      "alias": "repos.listProtectedBranchRequiredStatusChecksContexts",
-      "deprecated": "`repos.getProtectedBranchRequiredStatusChecksContexts()` is deprecated, use `repos.listProtectedBranchRequiredStatusChecksContexts()`"
-    },
     "getProtectedBranchRestrictions": {
       "method": "GET",
       "params": {
@@ -9005,18 +7826,6 @@
         }
       },
       "url": "/repos/:owner/:repo/branches/:branch/protection/restrictions"
-    },
-    "getProtectedBranchTeamRestrictions": {
-      "alias": "repos.listProtectedBranchTeamRestrictions",
-      "deprecated": "`repos.getProtectedBranchTeamRestrictions()` is deprecated, use `repos.listProtectedBranchTeamRestrictions()`"
-    },
-    "getProtectedBranchUserRestrictions": {
-      "alias": "repos.listProtectedBranchUserRestrictions",
-      "deprecated": "`repos.getProtectedBranchUserRestrictions()` is deprecated, use `repos.listProtectedBranchUserRestrictions()`"
-    },
-    "getPublic": {
-      "alias": "repos.listPublic",
-      "deprecated": "`repos.getPublic()` is deprecated, use `repos.listPublic()`"
     },
     "getPunchCardStats": {
       "method": "GET",
@@ -9049,17 +7858,9 @@
       },
       "url": "/repos/:owner/:repo/readme"
     },
-    "getReferrers": {
-      "alias": "repos.getTopReferrers",
-      "deprecated": "`repos.getReferrers()` is deprecated, use `repos.getTopReferrers()`"
-    },
     "getRelease": {
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "release_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -9081,10 +7882,6 @@
         "asset_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "asset_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -9115,46 +7912,6 @@
       },
       "url": "/repos/:owner/:repo/releases/tags/:tag"
     },
-    "getReleases": {
-      "alias": "repos.listReleases",
-      "deprecated": "`repos.getReleases()` is deprecated, use `repos.listReleases()`"
-    },
-    "getShaOfCommitRef": {
-      "alias": "repos.getCommitRefSha",
-      "deprecated": "`repos.getShaOfCommitRef()` is deprecated, use `repos.getCommitRefSha()`"
-    },
-    "getStatsCodeFrequency": {
-      "alias": "repos.getCodeFrequencyStats",
-      "deprecated": "`repos.getStatsCodeFrequency()` is deprecated, use `repos.getCodeFrequencyStats()`"
-    },
-    "getStatsCommitActivity": {
-      "alias": "repos.getCommitActivityStats",
-      "deprecated": "`repos.getStatsCommitActivity()` is deprecated, use `repos.getCommitActivityStats()`"
-    },
-    "getStatsContributors": {
-      "alias": "repos.getContributorsStats",
-      "deprecated": "`repos.getStatsContributors()` is deprecated, use `repos.getContributorsStats()`"
-    },
-    "getStatsParticipation": {
-      "alias": "repos.getParticipationStats",
-      "deprecated": "`repos.getStatsParticipation()` is deprecated, use `repos.getParticipationStats()`"
-    },
-    "getStatsPunchCard": {
-      "alias": "repos.getPunchCardStats",
-      "deprecated": "`repos.getStatsPunchCard()` is deprecated, use `repos.getPunchCardStats()`"
-    },
-    "getStatuses": {
-      "alias": "repos.listStatusesForRef",
-      "deprecated": "`repos.getStatuses()` is deprecated, use `repos.listStatusesForRef()`"
-    },
-    "getTags": {
-      "alias": "repos.listTags",
-      "deprecated": "`repos.getTags()` is deprecated, use `repos.listTags()`"
-    },
-    "getTeams": {
-      "alias": "repos.listTeams",
-      "deprecated": "`repos.getTeams()` is deprecated, use `repos.listTeams()`"
-    },
     "getTopPaths": {
       "method": "GET",
       "params": {
@@ -9182,10 +7939,6 @@
         }
       },
       "url": "/repos/:owner/:repo/traffic/popular/referrers"
-    },
-    "getTopics": {
-      "alias": "repos.listTopics",
-      "deprecated": "`repos.getTopics()` is deprecated, use `repos.listTopics()`"
     },
     "getViews": {
       "method": "GET",
@@ -9265,10 +8018,6 @@
     "listAssetsForRelease": {
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "release_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -9472,10 +8221,6 @@
         "deployment_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "deployment_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -9941,10 +8686,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "hook_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -9995,10 +8736,6 @@
     "removeDeployKey": {
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "key_id",
-          "deprecated": true
-        },
         "key_id": {
           "required": true,
           "type": "integer"
@@ -10289,10 +9026,6 @@
       },
       "method": "GET",
       "params": {
-        "name": {
-          "alias": "repo",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -10304,24 +9037,12 @@
       },
       "url": "/repos/:owner/:repo/community/profile"
     },
-    "reviewUserPermissionLevel": {
-      "alias": "repos.getCollaboratorPermissionLevel",
-      "deprecated": "`repos.reviewUserPermissionLevel()` is deprecated, use `repos.getCollaboratorPermissionLevel()`"
-    },
-    "testHook": {
-      "alias": "repos.testPushHook",
-      "deprecated": "`repos.testHook()` is deprecated, use `repos.testPushHook()`"
-    },
     "testPushHook": {
       "method": "POST",
       "params": {
         "hook_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "hook_id",
-          "deprecated": true
         },
         "owner": {
           "required": true,
@@ -10350,10 +9071,6 @@
         "repo": {
           "required": true,
           "type": "string"
-        },
-        "team_id": {
-          "alias": "team_ids",
-          "deprecated": true
         },
         "team_ids": {
           "type": "integer[]"
@@ -10493,10 +9210,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "comment_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -10579,10 +9292,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "hook_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -10650,10 +9359,6 @@
         }
       },
       "url": "/repos/:owner/:repo/invitations/:invitation_id"
-    },
-    "updateInvite": {
-      "alias": "repos.updateInvitation",
-      "deprecated": "`repos.updateInvite()` is deprecated, use `repos.updateInvitation()`"
     },
     "updateProtectedBranchPullRequestReviewEnforcement": {
       "method": "PATCH",
@@ -10724,10 +9429,6 @@
         "draft": {
           "type": "boolean"
         },
-        "id": {
-          "alias": "release_id",
-          "deprecated": true
-        },
         "name": {
           "type": "string"
         },
@@ -10762,10 +9463,6 @@
           "required": true,
           "type": "integer"
         },
-        "id": {
-          "alias": "asset_id",
-          "deprecated": true
-        },
         "label": {
           "type": "string"
         },
@@ -10783,19 +9480,9 @@
       },
       "url": "/repos/:owner/:repo/releases/assets/:asset_id"
     },
-    "uploadAsset": {
-      "alias": "repos.uploadReleaseAsset",
-      "deprecated": "`repos.uploadAsset()` is deprecated, use `repos.uploadReleaseAsset()`"
-    },
     "uploadReleaseAsset": {
       "method": "POST",
       "params": {
-        "contentLength": {
-          "alias": "headers.content-length"
-        },
-        "contentType": {
-          "alias": "headers.content-type"
-        },
         "file": {
           "mapTo": "input",
           "required": true,
@@ -11136,10 +9823,6 @@
       },
       "method": "PUT",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "role": {
           "enum": [
             "member",
@@ -11189,14 +9872,6 @@
       },
       "method": "PUT",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
-        "org": {
-          "alias": "owner",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -11226,10 +9901,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -11340,10 +10011,6 @@
       },
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "team_id": {
           "required": true,
           "type": "integer"
@@ -11395,10 +10062,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "team_id": {
           "required": true,
           "type": "integer"
@@ -11464,10 +10127,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "team_id": {
           "required": true,
           "type": "integer"
@@ -11504,10 +10163,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "page": {
           "type": "integer"
         },
@@ -11598,10 +10253,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "page": {
           "type": "integer"
         },
@@ -11626,10 +10277,6 @@
     "listPendingInvitations": {
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "page": {
           "type": "integer"
         },
@@ -11668,10 +10315,6 @@
       },
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "page": {
           "type": "integer"
         },
@@ -11705,10 +10348,6 @@
       },
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "team_id": {
           "required": true,
           "type": "integer"
@@ -11740,10 +10379,6 @@
       },
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
-        },
         "owner": {
           "required": true,
           "type": "string"
@@ -11784,10 +10419,6 @@
       "params": {
         "description": {
           "type": "string"
-        },
-        "id": {
-          "alias": "team_id",
-          "deprecated": true
         },
         "name": {
           "required": true,
@@ -11864,10 +10495,6 @@
     }
   },
   "users": {
-    "acceptRepoInvite": {
-      "alias": "repos.acceptInvitation",
-      "deprecated": "`users.acceptRepoInvite()` is deprecated, use `repos.acceptInvitation()`"
-    },
     "addEmails": {
       "method": "POST",
       "params": {
@@ -11908,10 +10535,6 @@
       },
       "url": "/user/blocks/:username"
     },
-    "blockUser": {
-      "alias": "users.block",
-      "deprecated": "`users.blockUser()` is deprecated, use `users.block()`"
-    },
     "checkBlocked": {
       "headers": {
         "accept": "application/vnd.github.giant-sentry-fist-preview+json"
@@ -11924,10 +10547,6 @@
         }
       },
       "url": "/user/blocks/:username"
-    },
-    "checkBlockedUser": {
-      "alias": "users.checkBlocked",
-      "deprecated": "`users.checkBlockedUser()` is deprecated, use `users.checkBlocked()`"
     },
     "checkFollowing": {
       "method": "GET",
@@ -11953,10 +10572,6 @@
       },
       "url": "/users/:username/following/:target_user"
     },
-    "checkIfOneFollowersOther": {
-      "alias": "users.checkFollowingForUser",
-      "deprecated": "`users.checkIfOneFollowersOther()` is deprecated, use `users.checkFollowingForUser()`"
-    },
     "createGpgKey": {
       "method": "POST",
       "params": {
@@ -11965,10 +10580,6 @@
         }
       },
       "url": "/user/gpg_keys"
-    },
-    "createKey": {
-      "alias": "users.createPublicKey",
-      "deprecated": "`users.createKey()` is deprecated, use `users.createPublicKey()`"
     },
     "createPublicKey": {
       "method": "POST",
@@ -11981,10 +10592,6 @@
         }
       },
       "url": "/user/keys"
-    },
-    "declineRepoInvite": {
-      "alias": "repos.declineInvitation",
-      "deprecated": "`users.declineRepoInvite()` is deprecated, use `repos.declineInvitation()`"
     },
     "deleteEmails": {
       "method": "DELETE",
@@ -12002,25 +10609,13 @@
         "gpg_key_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "gpg_key_id",
-          "deprecated": true
         }
       },
       "url": "/user/gpg_keys/:gpg_key_id"
     },
-    "deleteKey": {
-      "alias": "users.deletePublicKey",
-      "deprecated": "`users.deleteKey()` is deprecated, use `users.deletePublicKey()`"
-    },
     "deletePublicKey": {
       "method": "DELETE",
       "params": {
-        "id": {
-          "alias": "key_id",
-          "deprecated": true
-        },
         "key_id": {
           "required": true,
           "type": "integer"
@@ -12038,10 +10633,6 @@
       },
       "url": "/users/:username/site_admin"
     },
-    "editOrgMembership": {
-      "alias": "orgs.updateMembership",
-      "deprecated": "`users.editOrgMembership()` is deprecated, use `orgs.updateMembership()`"
-    },
     "follow": {
       "method": "PUT",
       "params": {
@@ -12052,26 +10643,10 @@
       },
       "url": "/user/following/:username"
     },
-    "followUser": {
-      "alias": "users.follow",
-      "deprecated": "`users.followUser()` is deprecated, use `users.follow()`"
-    },
-    "get": {
-      "alias": "users.getAuthenticated",
-      "deprecated": "`users.get()` is deprecated, use `users.getAuthenticated()`"
-    },
-    "getAll": {
-      "alias": "users.list",
-      "deprecated": "`users.getAll()` is deprecated, use `users.list()`"
-    },
     "getAuthenticated": {
       "method": "GET",
       "params": {},
       "url": "/user"
-    },
-    "getBlockedUsers": {
-      "alias": "users.listBlocked",
-      "deprecated": "`users.getBlockedUsers()` is deprecated, use `users.listBlocked()`"
     },
     "getById": {
       "method": "GET",
@@ -12118,117 +10693,25 @@
       },
       "url": "/users/:username/hovercard"
     },
-    "getEmails": {
-      "alias": "users.listEmails",
-      "deprecated": "`users.getEmails()` is deprecated, use `users.listEmails()`"
-    },
-    "getFollowers": {
-      "alias": "users.listFollowersForAuthenticatedUser",
-      "deprecated": "`users.getFollowers()` is deprecated, use `users.listFollowersForAuthenticatedUser()`"
-    },
-    "getFollowersForUser": {
-      "alias": "users.listFollowersForUser",
-      "deprecated": "`users.getFollowersForUser()` is deprecated, use `users.listFollowersForUser()`"
-    },
-    "getFollowing": {
-      "alias": "users.listFollowingForAuthenticatedUser",
-      "deprecated": "`users.getFollowing()` is deprecated, use `users.listFollowingForAuthenticatedUser()`"
-    },
-    "getFollowingForUser": {
-      "alias": "users.listFollowingForUser",
-      "deprecated": "`users.getFollowingForUser()` is deprecated, use `users.listFollowingForUser()`"
-    },
-    "getForUser": {
-      "alias": "users.getByUsername",
-      "deprecated": "`users.getForUser()` is deprecated, use `users.getByUsername()`"
-    },
     "getGpgKey": {
       "method": "GET",
       "params": {
         "gpg_key_id": {
           "required": true,
           "type": "integer"
-        },
-        "id": {
-          "alias": "gpg_key_id",
-          "deprecated": true
         }
       },
       "url": "/user/gpg_keys/:gpg_key_id"
     },
-    "getGpgKeys": {
-      "alias": "users.listGpgKeys",
-      "deprecated": "`users.getGpgKeys()` is deprecated, use `users.listGpgKeys()`"
-    },
-    "getGpgKeysForUser": {
-      "alias": "users.listGpgKeysForUser",
-      "deprecated": "`users.getGpgKeysForUser()` is deprecated, use `users.listGpgKeysForUser()`"
-    },
-    "getInstallationRepos": {
-      "alias": "apps.listInstallationReposForAuthenticatedUser",
-      "deprecated": "`users.getInstallationRepos()` is deprecated, use `apps.listInstallationReposForAuthenticatedUser()`"
-    },
-    "getInstallations": {
-      "alias": "apps.listInstallationsForAuthenticatedUser",
-      "deprecated": "`users.getInstallations()` is deprecated, use `apps.listInstallationsForAuthenticatedUser()`"
-    },
-    "getKey": {
-      "alias": "users.getPublicKey",
-      "deprecated": "`users.getKey()` is deprecated, use `users.getPublicKey()`"
-    },
-    "getKeys": {
-      "alias": "users.listPublicKeys",
-      "deprecated": "`users.getKeys()` is deprecated, use `users.listPublicKeys()`"
-    },
-    "getKeysForUser": {
-      "alias": "users.listPublicKeysForUser",
-      "deprecated": "`users.getKeysForUser()` is deprecated, use `users.listPublicKeysForUser()`"
-    },
-    "getMarketplacePurchases": {
-      "alias": "apps.listMarketplacePurchasesForAuthenticatedUser",
-      "deprecated": "`users.getMarketplacePurchases()` is deprecated, use `apps.listMarketplacePurchasesForAuthenticatedUser()`"
-    },
-    "getMarketplaceStubbedPurchases": {
-      "alias": "apps.listMarketplacePurchasesForAuthenticatedUserStubbed",
-      "deprecated": "`users.getMarketplaceStubbedPurchases()` is deprecated, use `apps.listMarketplacePurchasesForAuthenticatedUserStubbed()`"
-    },
-    "getOrgMembership": {
-      "alias": "orgs.getMembership",
-      "deprecated": "`users.getOrgMembership()` is deprecated, use `orgs.getMembership()`"
-    },
-    "getOrgMemberships": {
-      "alias": "orgs.listMemberships",
-      "deprecated": "`users.getOrgMemberships()` is deprecated, use `orgs.listMemberships()`"
-    },
-    "getOrgs": {
-      "alias": "orgs.list",
-      "deprecated": "`users.getOrgs()` is deprecated, use `orgs.list()`"
-    },
-    "getPublicEmails": {
-      "alias": "users.listPublicEmails",
-      "deprecated": "`users.getPublicEmails()` is deprecated, use `users.listPublicEmails()`"
-    },
     "getPublicKey": {
       "method": "GET",
       "params": {
-        "id": {
-          "alias": "key_id",
-          "deprecated": true
-        },
         "key_id": {
           "required": true,
           "type": "integer"
         }
       },
       "url": "/user/keys/:key_id"
-    },
-    "getRepoInvites": {
-      "alias": "repos.listInvitationsForAuthenticatedUser",
-      "deprecated": "`users.getRepoInvites()` is deprecated, use `repos.listInvitationsForAuthenticatedUser()`"
-    },
-    "getTeams": {
-      "alias": "teams.listForAuthenticatedUser",
-      "deprecated": "`users.getTeams()` is deprecated, use `teams.listForAuthenticatedUser()`"
     },
     "list": {
       "method": "GET",
@@ -12453,10 +10936,6 @@
       },
       "url": "/user/blocks/:username"
     },
-    "unblockUser": {
-      "alias": "users.unblock",
-      "deprecated": "`users.unblockUser()` is deprecated, use `users.unblock()`"
-    },
     "unfollow": {
       "method": "DELETE",
       "params": {
@@ -12467,10 +10946,6 @@
       },
       "url": "/user/following/:username"
     },
-    "unfollowUser": {
-      "alias": "users.unfollow",
-      "deprecated": "`users.unfollowUser()` is deprecated, use `users.unfollow()`"
-    },
     "unsuspend": {
       "method": "DELETE",
       "params": {
@@ -12480,10 +10955,6 @@
         }
       },
       "url": "/users/:username/suspended"
-    },
-    "update": {
-      "alias": "users.updateAuthenticated",
-      "deprecated": "`users.update()` is deprecated, use `users.updateAuthenticated()`"
     },
     "updateAuthenticated": {
       "method": "PATCH",
